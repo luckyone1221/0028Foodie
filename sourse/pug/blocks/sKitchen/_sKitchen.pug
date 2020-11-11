@@ -1,0 +1,105 @@
+mixin sKitchen(title)
+	// start sKitchen
+	+b.SECTION.sKitchen.section#sKitchen&attributes(attributes)
+		.container
+			+b.section-title
+				h2=title
+			+e.slider-cont
+				+e.slider
+					.swiper-container.filter-slider-js
+						.swiper-wrapper
+							+filterSlide('Пицца 2 в 1')
+							+filterSlide('Пицца в Симферополе')
+							+filterSlide('Пицца на тонком тесте')
+							+filterSlide('Паста')
+							+filterSlide('Лазанья')
+							+filterSlide('Комбо')
+							+filterSlide('Без грибов')
+							+filterSlide('Без свинины')
+							+filterSlide('Веган')
+							+filterSlide('Птица')
+							+filterSlide('Мясо')
+				+e.clear-btn(href="#") Офичистить фильтр
+			+e.items-row.row
+				+kitchenItem('italy-1', 'Пицца «Русская»', 'new', '526 ₽')
+				+kitchenItem('italy-2', 'Пицца «Пикник»', '', '303 ₽')
+				+kitchenItem('italy-3', 'Пицца «Diablo»', 'hot', '399 ₽')
+				+kitchenItem('italy-4', 'Пицца «Пепперони»', '', '303 ₽')
+				+kitchenItem('italy-5', 'Пицца «С морепродуктами»', '', '549 ₽')
+				+kitchenItem('italy-6', 'Пицца «Бекон»', '', '303 ₽')
+				+kitchenItem('italy-7', 'Пицца «Виченца»', '', '429 ₽')
+				+kitchenItem('italy-8', 'Пицца «Крестьянская»', '', '449 ₽')
+				+kitchenItem('italy-9', 'Пицца «Маргарита»', '', '299 ₽')
+				+kitchenItem('italy-10', 'Пицца «Мехико»', 'hot', '529 ₽')
+				+kitchenItem('italy-11', 'Пицца «Охотничья»', '', '399 ₽')
+				+kitchenItem('italy-12', 'Пицца «Чикен-Бургер»', '', '409 ₽')
+			.text-center
+				+e.more-btn(href='#') Показать еще
+	// end sKitchen
+
+mixin sKitchenJap(title)
+	// start sKitchen
+	+b.SECTION.sKitchen--jap.section#sKitchen&attributes(attributes)
+		.container
+			+b.section-title
+				h2=title
+			+e.slider-cont
+				+e.slider
+					.swiper-container.filter-slider-js
+						.swiper-wrapper
+							+filterSlide('Макки роллы')
+							+filterSlide('Сеты роллов')
+							+filterSlide('Запеченные роллы')
+							+filterSlide('Роллы')
+							+filterSlide('Темпура роллы')
+							+filterSlide('Гунканы')
+							+filterSlide('Запеченные роллы')
+				+e.clear-btn(href="#") Офичистить фильтр
+			+e.items-row.row
+				+kitchenItem('japan-1', 'Сет «Аригато»', 'new', '949 ₽', false)
+				+kitchenItem('japan-2', 'Сет «Омедето»', 'hit', '639 ₽', false)
+				+kitchenItem('japan-3', 'Сет «Сугой»', 'hot', '1949 ₽', false)
+				+kitchenItem('japan-4', 'Сет «Мега сет»', '', '303 ₽', false)
+				+kitchenItem('japan-5', 'Сет «»', '', '303 ₽', false)
+				+kitchenItem('japan-6', 'Ролл «Запеченный с тунцом»', '', '419 ₽', false)
+				+kitchenItem('japan-7', 'Ролл «Топ Фила»', '', '349 ₽', false)
+				+kitchenItem('japan-8', 'Ролл «Запеченый с мидиями»', '', '379 ₽', false)
+			.text-center
+				+e.more-btn(href='#') Показать еще
+	// end sKitchen
+
+mixin kitchenItem(imgName, name, modLine, price, hasSizeChoise=true)
+	+e.col.col-sm-6.col-md-4.col-xl-3
+		+e.item
+			if modLine === 'new'
+				+e.line--new NEW
+			if modLine === 'hot'
+				+e.line--hot HOT
+			if modLine === 'hit'
+				+e.line--hit hit
+			+e.img(href="#")
+				+e.img-inner
+					img(loading="lazy" src=`img/@2x/${imgName}.png` alt="")
+			+e.txt-cont
+				+e.name-cont
+					+e.name(href="#")=name
+					if !hasSizeChoise
+						+e.weight 475 гр.
+				+e.desr Состав: Соус красный, картофель, бекон, филе куриное, огурцы маринованные, помидоры, моцарелла.
+				if hasSizeChoise
+					+e.size
+						+e.s-radio-cont
+							+e.LABEL.s-radio
+								input(type="radio" name=imgName checked)
+								span 30 см
+							+e.LABEL.s-radio
+								input(type="radio" name=imgName)
+								span 40 см
+						+e.weight--size 475 гр.
+				+e.foot
+					+e.price=price
+					+e.cart-btn В корзину
+
+mixin filterSlide(txt)
+	.swiper-slide
+		+e.f-link.filter-link-js&attributes(attributes)(href='#')=txt

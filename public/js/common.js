@@ -256,7 +256,7 @@ function eventHandler() {
 
 	var x = window.location.host;
 	var screenName;
-	screenName = 'main.jpg';
+	screenName = '01.png';
 
 	if (screenName && x === "localhost:3000") {
 		$(".footer").after("<div class=\"pixel-perfect\" style=\"background-image: url(screen/".concat(screenName, ");\"></div>"));
@@ -304,6 +304,141 @@ function eventHandler() {
 		slideToClickedSlide: true,
 		freeModeMomentum: true
 	})); // modal window
+	//luckyone js
+	// var popoverTriggerList = [].slice.call(document.querySelectorAll('[data-toggle="popover"]'));
+	// var popoverList = popoverTriggerList.map(function (popoverTriggerEl) {
+	// 	return new bootstrap.Popover(popoverTriggerEl, {
+	// 		template: '<div class="popover" role="tooltip"><div class="popover-arrow"></div><h3 class="popover-header"></h3><div class="popover-body"></div><div class="text-center text-primary ttu pb-2">Свободен</div></div>',
+	// 		trigger: 'focus',
+	// 		placement: 'auto'
+	// 	});
+	// });
+	//top-nav popover
+
+	var popoverTriggerList = [].slice.call(document.querySelectorAll('[data-toggle="popover"]'));
+	var popoverList = popoverTriggerList.map(function (popoverTriggerEl) {
+		return new bootstrap.Popover(popoverTriggerEl, {
+			template: '<div class="popover top-nav-popover" role="tooltip">' + '<div class="popover-arrow"></div>' + '<h3 class="popover-header"></h3>' + '<div class="popover-body"></div>' + '</div>'
+		});
+	}); //header block slider
+	//
+
+	var banerSliderJs = new Swiper('.baner-slider-js', {
+		slidesPerView: 1,
+		loop: true,
+		//autoplay: 5000,
+		breakpoints: {
+			0: {
+				spaceBetween: 25
+			},
+			1200: {
+				spaceBetween: 40
+			}
+		},
+		lazy: {
+			loadPrevNext: true,
+			loadPrevNextAmount: 3
+		}
+	});
+	var menuSlider = new Swiper('.menu-slider-js', {
+		slidesPerView: 'auto',
+		loop: true,
+		//autoplay: 5000,
+		breakpoints: {
+			0: {
+				spaceBetween: 10
+			},
+			992: {
+				spaceBetween: 25
+			},
+			1500: {
+				spaceBetween: 40
+			}
+		},
+		lazy: {
+			loadPrevNext: true,
+			loadPrevNextAmount: 18
+		},
+		//nav
+		navigation: {
+			nextEl: '.menu-next--js',
+			prevEl: '.menu-prev--js'
+		}
+	}); //img-svg
+
+	$('img.img-svg-js').each(function () {
+		var $img = $(this);
+		var imgClass = $img.attr('class');
+		var imgURL = $img.attr('src');
+		$.get(imgURL, function (data) {
+			// Get the SVG tag, ignore the rest
+			var $svg = $(data).find('svg'); // Add replaced image's classes to the new SVG
+
+			if (typeof imgClass !== 'undefined') {
+				$svg = $svg.attr('class', imgClass + ' replaced-svg');
+			} // Remove any invalid XML tags as per http://validator.w3.org
+
+
+			$svg = $svg.removeAttr('xmlns:a'); // Check if the viewport is set, if the viewport is not set the SVG wont't scale.
+
+			if (!$svg.attr('viewBox') && $svg.attr('height') && $svg.attr('width')) {
+				$svg.attr('viewBox', '0 0 ' + $svg.attr('height') + ' ' + $svg.attr('width'));
+			} // Replace image with new SVG
+
+
+			$img.replaceWith($svg);
+		}, 'xml');
+	}); //filter sliders
+
+	$(".sKitchen").each(function () {
+		var filterSlider = new Swiper($(this).find(".filter-slider-js"), {
+			slidesPerView: 'auto',
+			//autoplay: 5000,
+			breakpoints: {
+				0: {
+					spaceBetween: 11.63
+				},
+				992: {
+					spaceBetween: 0
+				}
+			}
+		});
+	}); //filter links
+
+	$('.filter-slider-js').click(function () {
+		var target = event.target;
+
+		if (target.classList.contains('filter-link-js')) {
+			event.preventDefault();
+			target.classList.toggle('active');
+		}
+	}); //like slider
+
+	var likeSlider = new Swiper('.like-slider-js', {
+		slidesPerView: 'auto',
+		loop: true,
+		//autoplay: 5000,
+		breakpoints: {
+			0: {
+				spaceBetween: 10
+			},
+			992: {
+				spaceBetween: 25
+			},
+			1200: {
+				spaceBetween: 40
+			}
+		},
+		lazy: {
+			loadPrevNext: true,
+			loadPrevNextAmount: 18
+		},
+		//nav
+		navigation: {
+			nextEl: '.menu-next--js',
+			prevEl: '.menu-prev--js'
+		}
+	}); //end luckyone js
 }
 
 ;

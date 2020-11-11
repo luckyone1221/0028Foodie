@@ -25,30 +25,22 @@
 		<link rel="stylesheet" href="css/main.min.css"/>
 	</head>
 	<body> 
-		<div class="toggle-menu-mobile toggle-menu-mobile--js d-lg-none"><span></span>
-		</div>
 		<div class="menu-mobile menu-mobile--js d-lg-none">
 			<div class="toggle-menu-mobile toggle-menu-mobile--js"><span></span>
 			</div>
 			<div class="menu-mobile__inner">
 				<ul class="navMenu" itemscope="itemscope" itemtype="http://schema.org/SiteNavigationElement">
-					<li class="navMenu__item" itemprop="item"><a class="navMenu__link" href="#sContact" itemprop="url">Главная</a>
+					<li class="navMenu__item" itemprop="item"><a class="navMenu__link" href="#" itemprop="url">Меню</a>
 					</li>
-					<li class="navMenu__item" itemprop="item"><a class="navMenu__link" href="#" itemprop="url">Услуги  </a>
+					<li class="navMenu__item" itemprop="item"><a class="navMenu__link" href="#" itemprop="url">Акции</a>
 					</li>
-					<li class="navMenu__item" itemprop="item"><a class="navMenu__link" href="#" itemprop="url">Подбор септика   </a>
+					<li class="navMenu__item" itemprop="item"><a class="navMenu__link" href="#" itemprop="url">Бонусы</a>
 					</li>
-					<li class="navMenu__item" itemprop="item"><a class="navMenu__link" href="#" itemprop="url">Акции </a>
+					<li class="navMenu__item" itemprop="item"><a class="navMenu__link" href="#" itemprop="url">О нас</a>
 					</li>
-					<li class="navMenu__item" itemprop="item"><a class="navMenu__link" href="#" itemprop="url"> О компании  </a>
+					<li class="navMenu__item" itemprop="item"><a class="navMenu__link" href="#" itemprop="url">Доставка</a>
 					</li>
-					<li class="navMenu__item" itemprop="item"><a class="navMenu__link" href="#" itemprop="url"> Доставка и оплата </a>
-					</li>
-					<li class="navMenu__item" itemprop="item"><a class="navMenu__link" href="#" itemprop="url"> Клиентам  </a>
-					</li>
-					<li class="navMenu__item" itemprop="item"><a class="navMenu__link" href="#" itemprop="url"> Наши работы   </a>
-					</li>
-					<li class="navMenu__item" itemprop="item"><a class="navMenu__link" href="#sContact" itemprop="url">Контакты </a>
+					<li class="navMenu__item" itemprop="item"><a class="navMenu__link" href="#" itemprop="url">Экскурсия на кухню</a>
 					</li>
 				</ul>
 				<div class="text-right"></div>
@@ -57,89 +49,818 @@
 		<!--  мобильное меню-->
 		<!-- start header-->
 		<header class="header" id="header">
+			<!-- start top-nav-->
+			<div class="top-nav block-with-lazy">
+				<div class="top-nav__container container">
+					<div class="top-nav__burger toggle-menu-mobile toggle-menu-mobile--js d-flex d-lg-none"><img loading="lazy" src="img/svg/burger.svg" alt=""/>
+					</div><a class="top-nav__logo" href="/"><img loading="lazy" src="img/svg/logo.svg" alt=""/></a>
+					<div class="top-nav__contact-item top-nav__contact-item--loc d-none d-lg-flex">
+						<div class="top-nav__l-icon"><img loading="lazy" src="img/svg/location.svg" alt=""/>
+						</div>
+						<div class="top-nav__l-txt">
+							<div class="top-nav__l-big">Мы находимся
+							</div>
+							<div class="top-nav__l-small">г. Симферополь
+							</div>
+						</div>
+					</div>
+					<div class="top-nav__contact-item top-nav__contact-item--tell">
+						<div class="top-nav__l-icon"><img loading="lazy" src="img/svg/phone.svg" alt=""/>
+						</div>
+						<div class="top-nav__l-txt d-none d-lg-block"><a class="top-nav__l-big" href="tel:+79782202222">+7 (978) 220-22-22</a>
+							<div class="top-nav__l-small">Доставка с 9:00 до 23:50
+							</div>
+						</div>
+					</div><a class="top-nav__login-btn d-none d-lg-inline-block" href="#">Войти</a><a class="top-nav__cart-btn" tabindex="0" data-toggle="popover" data-trigger="focus" data-content="Товар добавлен, перейдите в корзину для оформления доставки" data-placement="right"><img loading="lazy" src="img/svg/cart.svg" alt=""/><span class="top-nav__orange-dot">3</span></a>
+				</div>
+			</div>
+			<div class="menu-cont d-none d-lg-block">
+				<div class="menu-cont__container container">
+					<ul class="navMenu" itemscope="itemscope" itemtype="http://schema.org/SiteNavigationElement">
+						<li class="navMenu__item" itemprop="item"><a class="navMenu__link" href="#" itemprop="url">Меню</a>
+						</li>
+						<li class="navMenu__item" itemprop="item"><a class="navMenu__link" href="#" itemprop="url">Акции</a>
+						</li>
+						<li class="navMenu__item" itemprop="item"><a class="navMenu__link" href="#" itemprop="url">Бонусы</a>
+						</li>
+						<li class="navMenu__item" itemprop="item"><a class="navMenu__link" href="#" itemprop="url">О нас</a>
+						</li>
+						<li class="navMenu__item" itemprop="item"><a class="navMenu__link" href="#" itemprop="url">Доставка</a>
+						</li>
+						<li class="navMenu__item" itemprop="item"><a class="navMenu__link" href="#" itemprop="url">Экскурсия на кухню</a>
+						</li>
+					</ul>
+				</div>
+			</div>
+			<!-- end top-nav-->
 		</header>
 		<!-- end header-->
-		<!-- start top-nav-->
-		<div class="top-nav block-with-lazy">
-			<div class="container">
-				<ul class="navMenu" itemscope="itemscope" itemtype="http://schema.org/SiteNavigationElement">
-					<li class="navMenu__item" itemprop="item"><a class="navMenu__link" href="#sContact" itemprop="url">Главная</a>
-					</li>
-					<li class="navMenu__item" itemprop="item"><a class="navMenu__link" href="#" itemprop="url">Услуги  </a>
-					</li>
-					<li class="navMenu__item" itemprop="item"><a class="navMenu__link" href="#" itemprop="url">Подбор септика   </a>
-					</li>
-					<li class="navMenu__item" itemprop="item"><a class="navMenu__link" href="#" itemprop="url">Акции </a>
-					</li>
-					<li class="navMenu__item" itemprop="item"><a class="navMenu__link" href="#" itemprop="url"> О компании  </a>
-					</li>
-					<li class="navMenu__item" itemprop="item"><a class="navMenu__link" href="#" itemprop="url"> Доставка и оплата </a>
-					</li>
-					<li class="navMenu__item" itemprop="item"><a class="navMenu__link" href="#" itemprop="url"> Клиентам  </a>
-					</li>
-					<li class="navMenu__item" itemprop="item"><a class="navMenu__link" href="#" itemprop="url"> Наши работы   </a>
-					</li>
-					<li class="navMenu__item" itemprop="item"><a class="navMenu__link" href="#sContact" itemprop="url">Контакты </a>
-					</li>
-				</ul>
-			</div>
-		</div>
-		<!-- end top-nav-->
-		<!-- start topLine-->
-		<section class="topLine section" id="topLine">
-			<div class="container">
-				<div class="section-title text-center">
-					<h2>topLine</h2>
-				</div>
-				<div class="row"></div>
-			</div>
-		</section>
-		<!-- end topLine-->
 		<!-- start headerBlock-->
 		<div class="headerBlock section" id="headerBlock">
 			<div class="container">
-				<div class="section-title text-center">
-					<h2>headerBlock ds dfsdfdsfsd</h2>
+				<div class="headerBlock__slider">
+					<div class="swiper-container baner-slider-js">
+						<div class="swiper-wrapper">
+							<div class="swiper-slide"><a class="headerBlock__link" href="#">
+								<picture class="headerBlock__img">
+									<source class="swiper-lazy" srcset="#" data-srcset="img/@2x/header-slide-1-xl.png" type="image/png" media="(min-width:576px)"/><img class="swiper-lazy" src="#" data-src="img/@2x/header-slide-1-sm.png" alt=""/>
+								</picture></a>
+							</div>
+							<div class="swiper-slide"><a class="headerBlock__link" href="#">
+								<picture class="headerBlock__img">
+									<source class="swiper-lazy" srcset="#" data-srcset="img/@2x/header-slide-1-xl.png" type="image/png" media="(min-width:576px)"/><img class="swiper-lazy" src="#" data-src="img/@2x/header-slide-1-sm.png" alt=""/>
+								</picture></a>
+							</div>
+							<div class="swiper-slide"><a class="headerBlock__link" href="#">
+								<picture class="headerBlock__img">
+									<source class="swiper-lazy" srcset="#" data-srcset="img/@2x/header-slide-1-xl.png" type="image/png" media="(min-width:576px)"/><img class="swiper-lazy" src="#" data-src="img/@2x/header-slide-1-sm.png" alt=""/>
+								</picture></a>
+							</div>
+						</div>
+					</div>
 				</div>
-				<div class="row"></div>
+				<div class="headerBlock__menu-slider">
+					<div class="menu-prev menu-prev--js d-none d-lg-flex"><img loading="lazy" src="img/svg/chevron-left.svg" alt=""/>
+					</div>
+					<div class="menu-next menu-next--js d-none d-lg-flex"><img loading="lazy" src="img/svg/chevron-right.svg" alt=""/>
+					</div>
+					<div class="swiper-container menu-slider-js">
+						<div class="swiper-wrapper">
+							<div class="swiper-slide"><a class="headerBlock__m-link" href="#"><span class="headerBlock__img-cont"><span class="headerBlock__m-img"><img class="img-svg-js" loading="lazy" src="img/svg/menu-slide-1.svg" alt=""/></span></span><span class="headerBlock__m-name">Итальянская кухня</span></a>
+							</div>
+							<div class="swiper-slide"><a class="headerBlock__m-link" href="#"><span class="headerBlock__img-cont"><span class="headerBlock__m-img"><img class="img-svg-js" loading="lazy" src="img/svg/menu-slide-2.svg" alt=""/></span></span><span class="headerBlock__m-name">Японская<br/>кухня</span></a>
+							</div>
+							<div class="swiper-slide"><a class="headerBlock__m-link" href="#"><span class="headerBlock__img-cont"><span class="headerBlock__m-img"><img class="img-svg-js" loading="lazy" src="img/svg/menu-slide-3.svg" alt=""/></span></span><span class="headerBlock__m-name">Паназиатская<br/>кухня</span></a>
+							</div>
+							<div class="swiper-slide"><a class="headerBlock__m-link" href="#"><span class="headerBlock__img-cont"><span class="headerBlock__m-img"><img class="img-svg-js" loading="lazy" src="img/svg/menu-slide-4.svg" alt=""/></span></span><span class="headerBlock__m-name">Европейская кухня</span></a>
+							</div>
+							<div class="swiper-slide"><a class="headerBlock__m-link" href="#"><span class="headerBlock__img-cont"><span class="headerBlock__m-img"><img class="img-svg-js" loading="lazy" src="img/svg/menu-slide-5.svg" alt=""/></span></span><span class="headerBlock__m-name">Фитнес<br/>меню</span></a>
+							</div>
+							<div class="swiper-slide"><a class="headerBlock__m-link" href="#"><span class="headerBlock__img-cont"><span class="headerBlock__m-img"><img class="img-svg-js" loading="lazy" src="img/svg/menu-slide-6.svg" alt=""/></span></span><span class="headerBlock__m-name">Национальная кухня</span></a>
+							</div>
+							<div class="swiper-slide"><a class="headerBlock__m-link" href="#"><span class="headerBlock__img-cont"><span class="headerBlock__m-img"><img class="img-svg-js" loading="lazy" src="img/svg/menu-slide-7.svg" alt=""/></span></span><span class="headerBlock__m-name">Бургеры и<br/>шаурма</span></a>
+							</div>
+							<div class="swiper-slide"><a class="headerBlock__m-link" href="#"><span class="headerBlock__img-cont"><span class="headerBlock__m-img"><img class="img-svg-js" loading="lazy" src="img/svg/menu-slide-8.svg" alt=""/></span></span><span class="headerBlock__m-name">Блюда на<br/>мангале</span></a>
+							</div>
+							<div class="swiper-slide"><a class="headerBlock__m-link" href="#"><span class="headerBlock__img-cont"><span class="headerBlock__m-img"><img class="img-svg-js" loading="lazy" src="img/svg/menu-slide-9.svg" alt=""/></span></span><span class="headerBlock__m-name">Горячие напитки</span></a>
+							</div>
+						</div>
+					</div>
+				</div>
 			</div>
 		</div>
 		<!-- end headerBlock-->
-		<!-- start sForm-->
-		<section class="sForm section" id="sForm">
+		<!-- start sKitchen-->
+		<section class="sKitchen section" id="sKitchen">
 			<div class="container">
-				<div class="section-title text-center">
-					<h2>sForm</h2>
+				<div class="section-title">
+					<h2>Итальянская кухня</h2>
 				</div>
-				<div class="row"></div>
+				<div class="sKitchen__slider-cont">
+					<div class="sKitchen__slider">
+						<div class="swiper-container filter-slider-js">
+							<div class="swiper-wrapper">
+								<div class="swiper-slide"><a class="sKitchen__f-link filter-link-js" href="#">Пицца 2 в 1</a>
+								</div>
+								<div class="swiper-slide"><a class="sKitchen__f-link filter-link-js" href="#">Пицца в Симферополе</a>
+								</div>
+								<div class="swiper-slide"><a class="sKitchen__f-link filter-link-js" href="#">Пицца на тонком тесте</a>
+								</div>
+								<div class="swiper-slide"><a class="sKitchen__f-link filter-link-js" href="#">Паста</a>
+								</div>
+								<div class="swiper-slide"><a class="sKitchen__f-link filter-link-js" href="#">Лазанья</a>
+								</div>
+								<div class="swiper-slide"><a class="sKitchen__f-link filter-link-js" href="#">Комбо</a>
+								</div>
+								<div class="swiper-slide"><a class="sKitchen__f-link filter-link-js" href="#">Без грибов</a>
+								</div>
+								<div class="swiper-slide"><a class="sKitchen__f-link filter-link-js" href="#">Без свинины</a>
+								</div>
+								<div class="swiper-slide"><a class="sKitchen__f-link filter-link-js" href="#">Веган</a>
+								</div>
+								<div class="swiper-slide"><a class="sKitchen__f-link filter-link-js" href="#">Птица</a>
+								</div>
+								<div class="swiper-slide"><a class="sKitchen__f-link filter-link-js" href="#">Мясо</a>
+								</div>
+							</div>
+						</div>
+					</div><a class="sKitchen__clear-btn" href="#">Офичистить фильтр</a>
+				</div>
+				<div class="sKitchen__items-row row">
+					<div class="sKitchen__col col-sm-6 col-md-4 col-xl-3">
+						<div class="sKitchen__item">
+							<div class="sKitchen__line sKitchen__line--new">NEW
+							</div><a class="sKitchen__img" href="#"><span class="sKitchen__img-inner"><img loading="lazy" src="img/@2x/italy-1.png" alt=""/></span></a>
+							<div class="sKitchen__txt-cont">
+								<div class="sKitchen__name-cont"><a class="sKitchen__name" href="#">Пицца «Русская»</a>
+								</div>
+								<div class="sKitchen__desr">Состав: Соус красный, картофель, бекон, филе куриное, огурцы маринованные, помидоры, моцарелла.
+								</div>
+								<div class="sKitchen__size">
+									<div class="sKitchen__s-radio-cont">
+										<label class="sKitchen__s-radio">
+											<input type="radio" name="italy-1" checked="checked"/><span>30 см</span>
+										</label>
+										<label class="sKitchen__s-radio">
+											<input type="radio" name="italy-1"/><span>40 см</span>
+										</label>
+									</div>
+									<div class="sKitchen__weight sKitchen__weight--size">475 гр.
+									</div>
+								</div>
+								<div class="sKitchen__foot">
+									<div class="sKitchen__price">526 ₽
+									</div>
+									<div class="sKitchen__cart-btn">В корзину
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="sKitchen__col col-sm-6 col-md-4 col-xl-3">
+						<div class="sKitchen__item"><a class="sKitchen__img" href="#"><span class="sKitchen__img-inner"><img loading="lazy" src="img/@2x/italy-2.png" alt=""/></span></a>
+							<div class="sKitchen__txt-cont">
+								<div class="sKitchen__name-cont"><a class="sKitchen__name" href="#">Пицца «Пикник»</a>
+								</div>
+								<div class="sKitchen__desr">Состав: Соус красный, картофель, бекон, филе куриное, огурцы маринованные, помидоры, моцарелла.
+								</div>
+								<div class="sKitchen__size">
+									<div class="sKitchen__s-radio-cont">
+										<label class="sKitchen__s-radio">
+											<input type="radio" name="italy-2" checked="checked"/><span>30 см</span>
+										</label>
+										<label class="sKitchen__s-radio">
+											<input type="radio" name="italy-2"/><span>40 см</span>
+										</label>
+									</div>
+									<div class="sKitchen__weight sKitchen__weight--size">475 гр.
+									</div>
+								</div>
+								<div class="sKitchen__foot">
+									<div class="sKitchen__price">303 ₽
+									</div>
+									<div class="sKitchen__cart-btn">В корзину
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="sKitchen__col col-sm-6 col-md-4 col-xl-3">
+						<div class="sKitchen__item">
+							<div class="sKitchen__line sKitchen__line--hot">HOT
+							</div><a class="sKitchen__img" href="#"><span class="sKitchen__img-inner"><img loading="lazy" src="img/@2x/italy-3.png" alt=""/></span></a>
+							<div class="sKitchen__txt-cont">
+								<div class="sKitchen__name-cont"><a class="sKitchen__name" href="#">Пицца «Diablo»</a>
+								</div>
+								<div class="sKitchen__desr">Состав: Соус красный, картофель, бекон, филе куриное, огурцы маринованные, помидоры, моцарелла.
+								</div>
+								<div class="sKitchen__size">
+									<div class="sKitchen__s-radio-cont">
+										<label class="sKitchen__s-radio">
+											<input type="radio" name="italy-3" checked="checked"/><span>30 см</span>
+										</label>
+										<label class="sKitchen__s-radio">
+											<input type="radio" name="italy-3"/><span>40 см</span>
+										</label>
+									</div>
+									<div class="sKitchen__weight sKitchen__weight--size">475 гр.
+									</div>
+								</div>
+								<div class="sKitchen__foot">
+									<div class="sKitchen__price">399 ₽
+									</div>
+									<div class="sKitchen__cart-btn">В корзину
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="sKitchen__col col-sm-6 col-md-4 col-xl-3">
+						<div class="sKitchen__item"><a class="sKitchen__img" href="#"><span class="sKitchen__img-inner"><img loading="lazy" src="img/@2x/italy-4.png" alt=""/></span></a>
+							<div class="sKitchen__txt-cont">
+								<div class="sKitchen__name-cont"><a class="sKitchen__name" href="#">Пицца «Пепперони»</a>
+								</div>
+								<div class="sKitchen__desr">Состав: Соус красный, картофель, бекон, филе куриное, огурцы маринованные, помидоры, моцарелла.
+								</div>
+								<div class="sKitchen__size">
+									<div class="sKitchen__s-radio-cont">
+										<label class="sKitchen__s-radio">
+											<input type="radio" name="italy-4" checked="checked"/><span>30 см</span>
+										</label>
+										<label class="sKitchen__s-radio">
+											<input type="radio" name="italy-4"/><span>40 см</span>
+										</label>
+									</div>
+									<div class="sKitchen__weight sKitchen__weight--size">475 гр.
+									</div>
+								</div>
+								<div class="sKitchen__foot">
+									<div class="sKitchen__price">303 ₽
+									</div>
+									<div class="sKitchen__cart-btn">В корзину
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="sKitchen__col col-sm-6 col-md-4 col-xl-3">
+						<div class="sKitchen__item"><a class="sKitchen__img" href="#"><span class="sKitchen__img-inner"><img loading="lazy" src="img/@2x/italy-5.png" alt=""/></span></a>
+							<div class="sKitchen__txt-cont">
+								<div class="sKitchen__name-cont"><a class="sKitchen__name" href="#">Пицца «С морепродуктами»</a>
+								</div>
+								<div class="sKitchen__desr">Состав: Соус красный, картофель, бекон, филе куриное, огурцы маринованные, помидоры, моцарелла.
+								</div>
+								<div class="sKitchen__size">
+									<div class="sKitchen__s-radio-cont">
+										<label class="sKitchen__s-radio">
+											<input type="radio" name="italy-5" checked="checked"/><span>30 см</span>
+										</label>
+										<label class="sKitchen__s-radio">
+											<input type="radio" name="italy-5"/><span>40 см</span>
+										</label>
+									</div>
+									<div class="sKitchen__weight sKitchen__weight--size">475 гр.
+									</div>
+								</div>
+								<div class="sKitchen__foot">
+									<div class="sKitchen__price">549 ₽
+									</div>
+									<div class="sKitchen__cart-btn">В корзину
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="sKitchen__col col-sm-6 col-md-4 col-xl-3">
+						<div class="sKitchen__item"><a class="sKitchen__img" href="#"><span class="sKitchen__img-inner"><img loading="lazy" src="img/@2x/italy-6.png" alt=""/></span></a>
+							<div class="sKitchen__txt-cont">
+								<div class="sKitchen__name-cont"><a class="sKitchen__name" href="#">Пицца «Бекон»</a>
+								</div>
+								<div class="sKitchen__desr">Состав: Соус красный, картофель, бекон, филе куриное, огурцы маринованные, помидоры, моцарелла.
+								</div>
+								<div class="sKitchen__size">
+									<div class="sKitchen__s-radio-cont">
+										<label class="sKitchen__s-radio">
+											<input type="radio" name="italy-6" checked="checked"/><span>30 см</span>
+										</label>
+										<label class="sKitchen__s-radio">
+											<input type="radio" name="italy-6"/><span>40 см</span>
+										</label>
+									</div>
+									<div class="sKitchen__weight sKitchen__weight--size">475 гр.
+									</div>
+								</div>
+								<div class="sKitchen__foot">
+									<div class="sKitchen__price">303 ₽
+									</div>
+									<div class="sKitchen__cart-btn">В корзину
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="sKitchen__col col-sm-6 col-md-4 col-xl-3">
+						<div class="sKitchen__item"><a class="sKitchen__img" href="#"><span class="sKitchen__img-inner"><img loading="lazy" src="img/@2x/italy-7.png" alt=""/></span></a>
+							<div class="sKitchen__txt-cont">
+								<div class="sKitchen__name-cont"><a class="sKitchen__name" href="#">Пицца «Виченца»</a>
+								</div>
+								<div class="sKitchen__desr">Состав: Соус красный, картофель, бекон, филе куриное, огурцы маринованные, помидоры, моцарелла.
+								</div>
+								<div class="sKitchen__size">
+									<div class="sKitchen__s-radio-cont">
+										<label class="sKitchen__s-radio">
+											<input type="radio" name="italy-7" checked="checked"/><span>30 см</span>
+										</label>
+										<label class="sKitchen__s-radio">
+											<input type="radio" name="italy-7"/><span>40 см</span>
+										</label>
+									</div>
+									<div class="sKitchen__weight sKitchen__weight--size">475 гр.
+									</div>
+								</div>
+								<div class="sKitchen__foot">
+									<div class="sKitchen__price">429 ₽
+									</div>
+									<div class="sKitchen__cart-btn">В корзину
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="sKitchen__col col-sm-6 col-md-4 col-xl-3">
+						<div class="sKitchen__item"><a class="sKitchen__img" href="#"><span class="sKitchen__img-inner"><img loading="lazy" src="img/@2x/italy-8.png" alt=""/></span></a>
+							<div class="sKitchen__txt-cont">
+								<div class="sKitchen__name-cont"><a class="sKitchen__name" href="#">Пицца «Крестьянская»</a>
+								</div>
+								<div class="sKitchen__desr">Состав: Соус красный, картофель, бекон, филе куриное, огурцы маринованные, помидоры, моцарелла.
+								</div>
+								<div class="sKitchen__size">
+									<div class="sKitchen__s-radio-cont">
+										<label class="sKitchen__s-radio">
+											<input type="radio" name="italy-8" checked="checked"/><span>30 см</span>
+										</label>
+										<label class="sKitchen__s-radio">
+											<input type="radio" name="italy-8"/><span>40 см</span>
+										</label>
+									</div>
+									<div class="sKitchen__weight sKitchen__weight--size">475 гр.
+									</div>
+								</div>
+								<div class="sKitchen__foot">
+									<div class="sKitchen__price">449 ₽
+									</div>
+									<div class="sKitchen__cart-btn">В корзину
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="sKitchen__col col-sm-6 col-md-4 col-xl-3">
+						<div class="sKitchen__item"><a class="sKitchen__img" href="#"><span class="sKitchen__img-inner"><img loading="lazy" src="img/@2x/italy-9.png" alt=""/></span></a>
+							<div class="sKitchen__txt-cont">
+								<div class="sKitchen__name-cont"><a class="sKitchen__name" href="#">Пицца «Маргарита»</a>
+								</div>
+								<div class="sKitchen__desr">Состав: Соус красный, картофель, бекон, филе куриное, огурцы маринованные, помидоры, моцарелла.
+								</div>
+								<div class="sKitchen__size">
+									<div class="sKitchen__s-radio-cont">
+										<label class="sKitchen__s-radio">
+											<input type="radio" name="italy-9" checked="checked"/><span>30 см</span>
+										</label>
+										<label class="sKitchen__s-radio">
+											<input type="radio" name="italy-9"/><span>40 см</span>
+										</label>
+									</div>
+									<div class="sKitchen__weight sKitchen__weight--size">475 гр.
+									</div>
+								</div>
+								<div class="sKitchen__foot">
+									<div class="sKitchen__price">299 ₽
+									</div>
+									<div class="sKitchen__cart-btn">В корзину
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="sKitchen__col col-sm-6 col-md-4 col-xl-3">
+						<div class="sKitchen__item">
+							<div class="sKitchen__line sKitchen__line--hot">HOT
+							</div><a class="sKitchen__img" href="#"><span class="sKitchen__img-inner"><img loading="lazy" src="img/@2x/italy-10.png" alt=""/></span></a>
+							<div class="sKitchen__txt-cont">
+								<div class="sKitchen__name-cont"><a class="sKitchen__name" href="#">Пицца «Мехико»</a>
+								</div>
+								<div class="sKitchen__desr">Состав: Соус красный, картофель, бекон, филе куриное, огурцы маринованные, помидоры, моцарелла.
+								</div>
+								<div class="sKitchen__size">
+									<div class="sKitchen__s-radio-cont">
+										<label class="sKitchen__s-radio">
+											<input type="radio" name="italy-10" checked="checked"/><span>30 см</span>
+										</label>
+										<label class="sKitchen__s-radio">
+											<input type="radio" name="italy-10"/><span>40 см</span>
+										</label>
+									</div>
+									<div class="sKitchen__weight sKitchen__weight--size">475 гр.
+									</div>
+								</div>
+								<div class="sKitchen__foot">
+									<div class="sKitchen__price">529 ₽
+									</div>
+									<div class="sKitchen__cart-btn">В корзину
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="sKitchen__col col-sm-6 col-md-4 col-xl-3">
+						<div class="sKitchen__item"><a class="sKitchen__img" href="#"><span class="sKitchen__img-inner"><img loading="lazy" src="img/@2x/italy-11.png" alt=""/></span></a>
+							<div class="sKitchen__txt-cont">
+								<div class="sKitchen__name-cont"><a class="sKitchen__name" href="#">Пицца «Охотничья»</a>
+								</div>
+								<div class="sKitchen__desr">Состав: Соус красный, картофель, бекон, филе куриное, огурцы маринованные, помидоры, моцарелла.
+								</div>
+								<div class="sKitchen__size">
+									<div class="sKitchen__s-radio-cont">
+										<label class="sKitchen__s-radio">
+											<input type="radio" name="italy-11" checked="checked"/><span>30 см</span>
+										</label>
+										<label class="sKitchen__s-radio">
+											<input type="radio" name="italy-11"/><span>40 см</span>
+										</label>
+									</div>
+									<div class="sKitchen__weight sKitchen__weight--size">475 гр.
+									</div>
+								</div>
+								<div class="sKitchen__foot">
+									<div class="sKitchen__price">399 ₽
+									</div>
+									<div class="sKitchen__cart-btn">В корзину
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="sKitchen__col col-sm-6 col-md-4 col-xl-3">
+						<div class="sKitchen__item"><a class="sKitchen__img" href="#"><span class="sKitchen__img-inner"><img loading="lazy" src="img/@2x/italy-12.png" alt=""/></span></a>
+							<div class="sKitchen__txt-cont">
+								<div class="sKitchen__name-cont"><a class="sKitchen__name" href="#">Пицца «Чикен-Бургер»</a>
+								</div>
+								<div class="sKitchen__desr">Состав: Соус красный, картофель, бекон, филе куриное, огурцы маринованные, помидоры, моцарелла.
+								</div>
+								<div class="sKitchen__size">
+									<div class="sKitchen__s-radio-cont">
+										<label class="sKitchen__s-radio">
+											<input type="radio" name="italy-12" checked="checked"/><span>30 см</span>
+										</label>
+										<label class="sKitchen__s-radio">
+											<input type="radio" name="italy-12"/><span>40 см</span>
+										</label>
+									</div>
+									<div class="sKitchen__weight sKitchen__weight--size">475 гр.
+									</div>
+								</div>
+								<div class="sKitchen__foot">
+									<div class="sKitchen__price">409 ₽
+									</div>
+									<div class="sKitchen__cart-btn">В корзину
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="text-center"><a class="sKitchen__more-btn" href="#">Показать еще</a>
+				</div>
 			</div>
 		</section>
-		<!-- end sForm-->
-		<!-- start sContact-->
-		<section class="sContact section" id="sContact">
+		<!-- end sKitchen-->
+		<!-- start sKitchen-->
+		<section class="sKitchen sKitchen--jap section" id="sKitchen">
 			<div class="container">
-				<div class="section-title text-center">
-					<h2>sContact</h2>
+				<div class="section-title">
+					<h2>Японская кухня</h2>
 				</div>
-				<div class="row"></div>
+				<div class="sKitchen__slider-cont">
+					<div class="sKitchen__slider">
+						<div class="swiper-container filter-slider-js">
+							<div class="swiper-wrapper">
+								<div class="swiper-slide"><a class="sKitchen__f-link filter-link-js" href="#">Макки роллы</a>
+								</div>
+								<div class="swiper-slide"><a class="sKitchen__f-link filter-link-js" href="#">Сеты роллов</a>
+								</div>
+								<div class="swiper-slide"><a class="sKitchen__f-link filter-link-js" href="#">Запеченные роллы</a>
+								</div>
+								<div class="swiper-slide"><a class="sKitchen__f-link filter-link-js" href="#">Роллы</a>
+								</div>
+								<div class="swiper-slide"><a class="sKitchen__f-link filter-link-js" href="#">Темпура роллы</a>
+								</div>
+								<div class="swiper-slide"><a class="sKitchen__f-link filter-link-js" href="#">Гунканы</a>
+								</div>
+								<div class="swiper-slide"><a class="sKitchen__f-link filter-link-js" href="#">Запеченные роллы</a>
+								</div>
+							</div>
+						</div>
+					</div><a class="sKitchen__clear-btn" href="#">Офичистить фильтр</a>
+				</div>
+				<div class="sKitchen__items-row row">
+					<div class="sKitchen__col col-sm-6 col-md-4 col-xl-3">
+						<div class="sKitchen__item">
+							<div class="sKitchen__line sKitchen__line--new">NEW
+							</div><a class="sKitchen__img" href="#"><span class="sKitchen__img-inner"><img loading="lazy" src="img/@2x/japan-1.png" alt=""/></span></a>
+							<div class="sKitchen__txt-cont">
+								<div class="sKitchen__name-cont"><a class="sKitchen__name" href="#">Сет «Аригато»</a>
+									<div class="sKitchen__weight">475 гр.
+									</div>
+								</div>
+								<div class="sKitchen__desr">Состав: Соус красный, картофель, бекон, филе куриное, огурцы маринованные, помидоры, моцарелла.
+								</div>
+								<div class="sKitchen__foot">
+									<div class="sKitchen__price">949 ₽
+									</div>
+									<div class="sKitchen__cart-btn">В корзину
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="sKitchen__col col-sm-6 col-md-4 col-xl-3">
+						<div class="sKitchen__item">
+							<div class="sKitchen__line sKitchen__line--hit">hit
+							</div><a class="sKitchen__img" href="#"><span class="sKitchen__img-inner"><img loading="lazy" src="img/@2x/japan-2.png" alt=""/></span></a>
+							<div class="sKitchen__txt-cont">
+								<div class="sKitchen__name-cont"><a class="sKitchen__name" href="#">Сет «Омедето»</a>
+									<div class="sKitchen__weight">475 гр.
+									</div>
+								</div>
+								<div class="sKitchen__desr">Состав: Соус красный, картофель, бекон, филе куриное, огурцы маринованные, помидоры, моцарелла.
+								</div>
+								<div class="sKitchen__foot">
+									<div class="sKitchen__price">639 ₽
+									</div>
+									<div class="sKitchen__cart-btn">В корзину
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="sKitchen__col col-sm-6 col-md-4 col-xl-3">
+						<div class="sKitchen__item">
+							<div class="sKitchen__line sKitchen__line--hot">HOT
+							</div><a class="sKitchen__img" href="#"><span class="sKitchen__img-inner"><img loading="lazy" src="img/@2x/japan-3.png" alt=""/></span></a>
+							<div class="sKitchen__txt-cont">
+								<div class="sKitchen__name-cont"><a class="sKitchen__name" href="#">Сет «Сугой»</a>
+									<div class="sKitchen__weight">475 гр.
+									</div>
+								</div>
+								<div class="sKitchen__desr">Состав: Соус красный, картофель, бекон, филе куриное, огурцы маринованные, помидоры, моцарелла.
+								</div>
+								<div class="sKitchen__foot">
+									<div class="sKitchen__price">1949 ₽
+									</div>
+									<div class="sKitchen__cart-btn">В корзину
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="sKitchen__col col-sm-6 col-md-4 col-xl-3">
+						<div class="sKitchen__item"><a class="sKitchen__img" href="#"><span class="sKitchen__img-inner"><img loading="lazy" src="img/@2x/japan-4.png" alt=""/></span></a>
+							<div class="sKitchen__txt-cont">
+								<div class="sKitchen__name-cont"><a class="sKitchen__name" href="#">Сет «Мега сет»</a>
+									<div class="sKitchen__weight">475 гр.
+									</div>
+								</div>
+								<div class="sKitchen__desr">Состав: Соус красный, картофель, бекон, филе куриное, огурцы маринованные, помидоры, моцарелла.
+								</div>
+								<div class="sKitchen__foot">
+									<div class="sKitchen__price">303 ₽
+									</div>
+									<div class="sKitchen__cart-btn">В корзину
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="sKitchen__col col-sm-6 col-md-4 col-xl-3">
+						<div class="sKitchen__item"><a class="sKitchen__img" href="#"><span class="sKitchen__img-inner"><img loading="lazy" src="img/@2x/japan-5.png" alt=""/></span></a>
+							<div class="sKitchen__txt-cont">
+								<div class="sKitchen__name-cont"><a class="sKitchen__name" href="#">Сет «»</a>
+									<div class="sKitchen__weight">475 гр.
+									</div>
+								</div>
+								<div class="sKitchen__desr">Состав: Соус красный, картофель, бекон, филе куриное, огурцы маринованные, помидоры, моцарелла.
+								</div>
+								<div class="sKitchen__foot">
+									<div class="sKitchen__price">303 ₽
+									</div>
+									<div class="sKitchen__cart-btn">В корзину
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="sKitchen__col col-sm-6 col-md-4 col-xl-3">
+						<div class="sKitchen__item"><a class="sKitchen__img" href="#"><span class="sKitchen__img-inner"><img loading="lazy" src="img/@2x/japan-6.png" alt=""/></span></a>
+							<div class="sKitchen__txt-cont">
+								<div class="sKitchen__name-cont"><a class="sKitchen__name" href="#">Ролл «Запеченный с тунцом»</a>
+									<div class="sKitchen__weight">475 гр.
+									</div>
+								</div>
+								<div class="sKitchen__desr">Состав: Соус красный, картофель, бекон, филе куриное, огурцы маринованные, помидоры, моцарелла.
+								</div>
+								<div class="sKitchen__foot">
+									<div class="sKitchen__price">419 ₽
+									</div>
+									<div class="sKitchen__cart-btn">В корзину
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="sKitchen__col col-sm-6 col-md-4 col-xl-3">
+						<div class="sKitchen__item"><a class="sKitchen__img" href="#"><span class="sKitchen__img-inner"><img loading="lazy" src="img/@2x/japan-7.png" alt=""/></span></a>
+							<div class="sKitchen__txt-cont">
+								<div class="sKitchen__name-cont"><a class="sKitchen__name" href="#">Ролл «Топ Фила»</a>
+									<div class="sKitchen__weight">475 гр.
+									</div>
+								</div>
+								<div class="sKitchen__desr">Состав: Соус красный, картофель, бекон, филе куриное, огурцы маринованные, помидоры, моцарелла.
+								</div>
+								<div class="sKitchen__foot">
+									<div class="sKitchen__price">349 ₽
+									</div>
+									<div class="sKitchen__cart-btn">В корзину
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="sKitchen__col col-sm-6 col-md-4 col-xl-3">
+						<div class="sKitchen__item"><a class="sKitchen__img" href="#"><span class="sKitchen__img-inner"><img loading="lazy" src="img/@2x/japan-8.png" alt=""/></span></a>
+							<div class="sKitchen__txt-cont">
+								<div class="sKitchen__name-cont"><a class="sKitchen__name" href="#">Ролл «Запеченый с мидиями»</a>
+									<div class="sKitchen__weight">475 гр.
+									</div>
+								</div>
+								<div class="sKitchen__desr">Состав: Соус красный, картофель, бекон, филе куриное, огурцы маринованные, помидоры, моцарелла.
+								</div>
+								<div class="sKitchen__foot">
+									<div class="sKitchen__price">379 ₽
+									</div>
+									<div class="sKitchen__cart-btn">В корзину
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="text-center"><a class="sKitchen__more-btn" href="#">Показать еще</a>
+				</div>
 			</div>
 		</section>
-		<!-- end sContact-->
+		<!-- end sKitchen-->
+		<!-- start sLike-->
+		<section class="sLike section" id="sLike">
+			<div class="container">
+				<div class="section-title">
+					<h2>Вам может понравиться</h2>
+				</div>
+			</div>
+			<div class="sLike__slider">
+				<div class="swiper-container like-slider-js">
+					<div class="swiper-wrapper">
+						<div class="swiper-slide"><a class="sLike__img" href="#"><span class="sLike__img-inner"><img loading="lazy" src="img/@2x/like-1.png" alt=""/></span></a><a class="sLike__name" href="#">Блинчики с<br/>джемом</a>
+							<div class="sLike__foot">
+								<div class="sLike__price">139 ₽
+								</div><a class="sLike__plus-btn" href="#">+</a>
+							</div>
+						</div>
+						<div class="swiper-slide"><a class="sLike__img" href="#"><span class="sLike__img-inner"><img loading="lazy" src="img/@2x/like-1.png" alt=""/></span></a><a class="sLike__name" href="#">Блинчики с<br/>джемом</a>
+							<div class="sLike__foot">
+								<div class="sLike__price">139 ₽
+								</div><a class="sLike__plus-btn" href="#">+</a>
+							</div>
+						</div>
+						<div class="swiper-slide"><a class="sLike__img" href="#"><span class="sLike__img-inner"><img loading="lazy" src="img/@2x/like-3.png" alt=""/></span></a><a class="sLike__name" href="#">Блинчики с<br/>джемом</a>
+							<div class="sLike__foot">
+								<div class="sLike__price">139 ₽
+								</div><a class="sLike__plus-btn" href="#">+</a>
+							</div>
+						</div>
+						<div class="swiper-slide"><a class="sLike__img" href="#"><span class="sLike__img-inner"><img loading="lazy" src="img/@2x/like-4.png" alt=""/></span></a><a class="sLike__name" href="#">Блинчики с<br/>джемом</a>
+							<div class="sLike__foot">
+								<div class="sLike__price">139 ₽
+								</div><a class="sLike__plus-btn" href="#">+</a>
+							</div>
+						</div>
+						<div class="swiper-slide"><a class="sLike__img" href="#"><span class="sLike__img-inner"><img loading="lazy" src="img/@2x/like-5.png" alt=""/></span></a><a class="sLike__name" href="#">Блинчики с<br/>джемом</a>
+							<div class="sLike__foot">
+								<div class="sLike__price">139 ₽
+								</div><a class="sLike__plus-btn" href="#">+</a>
+							</div>
+						</div>
+						<div class="swiper-slide"><a class="sLike__img" href="#"><span class="sLike__img-inner"><img loading="lazy" src="img/@2x/like-6.png" alt=""/></span></a><a class="sLike__name" href="#">Блинчики с<br/>джемом</a>
+							<div class="sLike__foot">
+								<div class="sLike__price">139 ₽
+								</div><a class="sLike__plus-btn" href="#">+</a>
+							</div>
+						</div>
+						<div class="swiper-slide"><a class="sLike__img" href="#"><span class="sLike__img-inner"><img loading="lazy" src="img/@2x/like-1.png" alt=""/></span></a><a class="sLike__name" href="#">Блинчики с<br/>джемом</a>
+							<div class="sLike__foot">
+								<div class="sLike__price">139 ₽
+								</div><a class="sLike__plus-btn" href="#">+</a>
+							</div>
+						</div>
+						<div class="swiper-slide"><a class="sLike__img" href="#"><span class="sLike__img-inner"><img loading="lazy" src="img/@2x/like-1.png" alt=""/></span></a><a class="sLike__name" href="#">Блинчики с<br/>джемом</a>
+							<div class="sLike__foot">
+								<div class="sLike__price">139 ₽
+								</div><a class="sLike__plus-btn" href="#">+</a>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+		<!-- end sLike-->
+		<!-- start sBaners-->
+		<div class="sBaners section" id="sBaners">
+			<div class="container">
+				<div class="sBaners__row row">
+					<div class="sBaners__col col-12 col-lg-6"><a class="sBaners__item" href="#"><span class="sBaners__ball"></span><span class="sBaners__img-cont"><img loading="lazy" src="img/@2x/baner-1.png" alt=""/></span><span class="sBaners__headline">Доставка</span><span class="sBaners__descr">Узнайте всю информацию о нашей доставке, области в которые мы доставляем и их ценах</span><span class="sBaners__btn">Подробнее</span></a>
+					</div>
+					<div class="sBaners__col col-12 col-lg-6"><a class="sBaners__item" href="#"><span class="sBaners__ball"></span><span class="sBaners__img-cont"><img loading="lazy" src="img/@2x/baner-2.png" alt=""/></span><span class="sBaners__headline">Акции</span><span class="sBaners__descr">Узнайте всю информацию об акциях и выгодных предложениях нашего ресторана</span><span class="sBaners__btn">Подробнее</span></a>
+					</div>
+				</div>
+			</div>
+		</div>
+		<!-- end sBaners-->
 		<footer class="footer block-with-lazy">
-			<div class="container">
-				<h2>footer</h2>
+			<div class="footer__top-strip">
+				<div class="container">
+					<div class="footer__row">
+						<div class="footer__t-txt"><span class="d-none d-lg-block">Сделай первый заказ и получи скидку 10%, а так же 10% кеш-бэк на бонусную карту</span><span class="d-lg-none">Получи скидку 10% на первый заказ</span>
+						</div><a class="footer__btn" href="#"><span>Сделать заказ</span>
+						<svg class="icon icon-arrwo-right ">
+							<use xlink:href="img/svg/sprite.svg#arrwo-right"></use>
+						</svg></a>
+					</div>
+				</div>
+			</div>
+			<div class="footer__content">
+				<div class="container">
+					<div class="footer__c-row row">
+						<div class="footer__col col-sm-6 col-lg-3">
+							<div class="footer__title">Компания:
+							</div>
+							<ul class="footer__footer-menu">
+								<li><a href="#">Меню</a></li>
+								<li><a href="#">Доставка</a></li>
+								<li><a href="#">Акции</a></li>
+								<li><a href="#">Бонусы</a></li>
+								<li><a href="#">Экскурсия на кухню</a></li>
+								<li><a href="#">Отзывы</a></li>
+								<li><a href="#">Личный кабинет</a></li>
+								<li><a href="#">Контакты</a></li>
+							</ul>
+						</div>
+						<div class="footer__col col-sm-6 col-lg-3">
+							<div class="footer__title">Кухни:
+							</div>
+							<ul class="footer__footer-menu">
+								<li><a href="#">Европейская Кухня</a></li>
+								<li><a href="#">Итальянская кухня</a></li>
+								<li><a href="#">Национальная кухня</a></li>
+								<li><a href="#">Паназиатская кухня</a></li>
+								<li><a href="#">Японская Кухня</a></li>
+							</ul>
+						</div>
+						<div class="footer__col footer__col--soc col-sm-6 col-lg-3">
+							<div class="footer__title">Мы в соц.сетях:
+							</div>
+							<div class="soc"><a class="soc__item" href="#" target="_blank"><img loading="lazy" src="img/svg/vk.svg" alt=""/></a><a class="soc__item" href="#" target="_blank"><img loading="lazy" src="img/svg/odnoklasniki.svg" alt=""/></a><a class="soc__item" href="#" target="_blank"><img loading="lazy" src="img/svg/youtube.svg" alt=""/></a><a class="soc__item" href="#" target="_blank"><img loading="lazy" src="img/svg/insta.svg" alt=""/></a>
+							</div>
+						</div>
+						<div class="footer__col col-sm-6 col-lg-3">
+							<div class="footer__title">Мы принимаем к оплате:
+							</div>
+							<div class="footer__pay-img"><img loading="lazy" src="img/@2x/paymnet-img.png" alt=""/>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="footer__bot-strip">
+				<div class="container">
+					<div class="footer__b-row"><span>Доставка еды Foodie © 2020</span><a href="#">Политика конфиденциальности</a>
+					</div>
+				</div>
 			</div>
 		</footer>
 		<!--  start modals-->
 		<div class="modal-win" id="modal-call" style="display: none">
 			<div class="form-wrap">
 				<form>
-					<input type="hidden" name="example-input-field"/>
-					<input class="order" type="hidden" name="order" value="Заявка  с сайта"/>
-					<input class="utm_source" type="hidden" name="utm_source"/>
-					<input class="utm_term" type="hidden" name="utm_term"/>
-					<input class="utm_medium" type="hidden" name="utm_medium"/>
-					<input class="utm_campaign" type="hidden" name="utm_campaign"/>
 					<div class="text-center">
 						<div class="form-wrap__title form-data h3 ttu">Обратный звонок
 						</div>
@@ -167,7 +888,8 @@
 		<!-- modal libs-->
 		<!-- slider libs-->
 		<script src="libs/swiper/js/swiper.min.js"></script>
-		<!-- /slider libs-->
+		<!-- /slider libs--><script src="//cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"></script>
+<script src="//stackpath.bootstrapcdn.com/bootstrap/5.0.0-alpha1/js/bootstrap.min.js"></script>
 		<script src="libs/inputmask/inputmask.min.js"></script>
 		<script src="js/common.js"></script>
 	</body>

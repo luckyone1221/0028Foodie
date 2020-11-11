@@ -1,4 +1,55 @@
 mixin footer()
 	+b.FOOTER.footer.block-with-lazy
-		.container
-			h2 footer
+		+e.top-strip
+			.container
+				+e.row
+					+e.t-txt
+						span.d-none.d-lg-block Сделай первый заказ и получи скидку 10%, а так же 10% кеш-бэк на бонусную карту
+						span.d-lg-none Получи скидку 10% на первый заказ
+					+e.btn(href="#")
+						span Сделать заказ
+						+icon('arrwo-right')
+		+e.content
+			.container
+				+e.c-row.row
+					+e.col.col-sm-6.col-lg-3
+						+e.title Компания:
+						+e.UL.footer-menu
+							li: a(href="#") Меню
+							li: a(href="#") Доставка
+							li: a(href="#") Акции
+							li: a(href="#") Бонусы
+							li: a(href="#") Экскурсия на кухню
+							li: a(href="#") Отзывы
+							li: a(href="#") Личный кабинет
+							li: a(href="#") Контакты
+					+e.col.col-sm-6.col-lg-3
+						+e.title Кухни:
+						+e.UL.footer-menu
+							li: a(href="#") Европейская Кухня
+							li: a(href="#") Итальянская кухня
+							li: a(href="#") Национальная кухня
+							li: a(href="#") Паназиатская кухня
+							li: a(href="#") Японская Кухня
+					+e.col--soc.col-sm-6.col-lg-3
+						+e.title Мы в соц.сетях:
+						+soc()
+							+item-sos()
+								img(loading="lazy" src="img/svg/vk.svg" alt="")
+							+item-sos()
+								img(loading="lazy" src="img/svg/odnoklasniki.svg" alt="")
+							+item-sos()
+								img(loading="lazy" src="img/svg/youtube.svg" alt="")
+							+item-sos()
+								img(loading="lazy" src="img/svg/insta.svg" alt="")
+					+e.col.col-sm-6.col-lg-3
+						+e.title Мы принимаем к оплате:
+						+e.pay-img
+							img(loading="lazy" src="img/@2x/paymnet-img.png" alt="")
+		+e.bot-strip
+			.container
+				+e.b-row
+					span Доставка еды Foodie © 2020
+					a(href='#') Политика конфиденциальности
+
+

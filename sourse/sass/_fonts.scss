@@ -1,12 +1,15 @@
-$default-font: "roboto";
+$default-font: "TT Norms";
+$mono: "Co Headline Corp";
 // $file-form: ($file-formats: woff2 woff ttf);
 $addr: '../fonts/';
 $file-format: woff2 woff;
 
-@include font-face ($default-font, $addr + "Roboto-Regular/Roboto-Regular", $file-formats: $file-format);
-@include font-face ($default-font, $addr + "Roboto-Bold/Roboto-Bold", bold, $file-formats: $file-format);
-@include font-face ($default-font, $addr + "Roboto-Medium/Roboto-Medium", 500, $file-formats: $file-format);
-@include font-face ($default-font, $addr + "Roboto-Black/Roboto-Black", 900, $file-formats: $file-format);
+//def
+@include font-face ($default-font, $addr + "TTNorms-Regular/TTNorms-Regular", 400, $file-formats: $file-format);
+
+//mono
+@include font-face ($mono, $addr + "CoHeadlineCorp-Light/CoHeadlineCorp-Light", 300, $file-formats: $file-format);
+//@include font-face ($mono, $addr + "CoHeadlineCorp-Bold/CoHeadlineCorp-Bold", 700, $file-formats: $file-format);
 
 // font-weight helper:
 

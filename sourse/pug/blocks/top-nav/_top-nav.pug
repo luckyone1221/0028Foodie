@@ -1,27 +1,37 @@
 mixin mob-mnu()
-	-
-		//- let path = require('path');
-		//- let fs = require('fs');
-		//- var requestURL = 'top-nav.json';
-		//- var request = new XMLHttpRequest();
-		//- request.open('GET', requestURL);
-		//- request.responseType = 'json';
-		//- let dataJson = JSON.parse(json);
-	//- h1= dataJson['lala'] 
-	+b.toggle-menu-mobile--js.d-lg-none
-		span
 	+b.menu-mobile--js.d-lg-none
 		+b.toggle-menu-mobile--js
 			span
 		+e.inner
-		
 			+mnu()
 			.text-right
 	//  мобильное меню
+
 mixin top-nav() 
 	// start top-nav
 	+b.top-nav.block-with-lazy
-		.container
+		+e.container.container
+			+e.burger.toggle-menu-mobile--js.d-flex.d-lg-none
+				img(loading="lazy" src="img/svg/burger.svg" alt="")
+			+e.logo(href="/")
+				img(loading="lazy" src="img/svg/logo.svg" alt="")
+			+e.contact-item--loc.d-none.d-lg-flex
+				+e.l-icon
+					img(loading="lazy" src="img/svg/location.svg" alt="")
+				+e.l-txt
+					+e.l-big Мы находимся
+					+e.l-small г. Симферополь
+			+e.contact-item--tell
+				+e.l-icon
+					img(loading="lazy" src="img/svg/phone.svg" alt="")
+				+e.l-txt.d-none.d-lg-block
+					+e.l-big(href="tel:+79782202222") +7 (978) 220-22-22
+					+e.l-small Доставка с 9:00 до 23:50
+			+e.login-btn.d-none.d-lg-inline-block(href='#') Войти
+			+e.A.cart-btn(tabindex='0' data-toggle='popover' data-trigger='focus' data-content="Товар добавлен, перейдите в корзину для оформления доставки" data-placement="right")
+				img(loading="lazy" src="img/svg/cart.svg" alt="")
+				+e.orange-dot 3
+	+b.menu-cont.d-none.d-lg-block
+		+e.container.container
 			+mnu()
-					
 	// end top-nav

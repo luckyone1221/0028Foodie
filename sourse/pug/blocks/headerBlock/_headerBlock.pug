@@ -2,9 +2,61 @@ mixin headerBlock()
 	// start headerBlock
 	+b.headerBlock.section#headerBlock&attributes(attributes)
 		.container
-			+b.section-title.text-center
-				h2 headerBlock ds dfsdfdsfsd
-
-			.row
-						
+			+e.slider
+				.swiper-container.baner-slider-js
+					.swiper-wrapper
+						+headerSlider()
+						+headerSlider()
+						+headerSlider()
+			+e.menu-slider
+				+b.menu-prev--js.d-none.d-lg-flex
+					img(loading="lazy" src="img/svg/chevron-left.svg" alt="")
+				+b.menu-next--js.d-none.d-lg-flex
+					img(loading="lazy" src="img/svg/chevron-right.svg" alt="")
+				.swiper-container.menu-slider-js
+					.swiper-wrapper
+						+menuSlide(1)
+							| Итальянская кухня
+						+menuSlide(2)
+							| Японская
+							br
+							| кухня
+						+menuSlide(3)
+							| Паназиатская
+							br
+							| кухня
+						+menuSlide(4)
+							|Европейская кухня
+						+menuSlide(5)
+							| Фитнес
+							br
+							| меню
+						+menuSlide(6)
+							|Национальная кухня
+						+menuSlide(7)
+							| Бургеры и
+							br
+							| шаурма
+						+menuSlide(8)
+							| Блюда на
+							br
+							| мангале
+						+menuSlide(9)
+							|Горячие напитки
 	// end headerBlock
+
+mixin headerSlider()
+	.swiper-slide
+		+e.link(href="#")
+			+e.PICTURE.img
+				source.swiper-lazy(srcset="#" data-srcset=`img/@2x/header-slide-1-xl.png` type="image/png" media="(min-width:576px)")
+				img.swiper-lazy(src="#" data-src=`img/@2x/header-slide-1-sm.png` alt="")
+
+mixin menuSlide(imgNum)
+	.swiper-slide
+		+e.m-link(href='#')
+			+e.img-cont
+				+e.m-img
+					img.img-svg-js(loading="lazy" src=`img/svg/menu-slide-${imgNum}.svg` alt="")
+			+e.m-name
+				block

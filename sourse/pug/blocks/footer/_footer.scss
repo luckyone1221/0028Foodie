@@ -1,43 +1,190 @@
 .footer {
-		
-	margin-top: auto;
+  padding: 0;
+  //top-strip
+  &__top-strip{
+    color: $white;
+    background: linear-gradient(86.33deg, #FFE177 -44.27%, #FE860A 101.64%);
 
-// 
-@include media-breakpoint-up(xl) {}
+    min-height: 50px;
+    padding: 6px 0 6px 0;
+    @include media-breakpoint-up(lg){
+      min-height: 80px;
+      padding: 19px 0 20px 0;
+    }
+  }
+  &__row{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  &__t-txt{
+    font-family: $mono;
+    line-height: 1.5;
 
-@include media-breakpoint-up(lg) {}
+    font-size: 12px;
+    @include media-breakpoint-up(xl){
+      font-size: 16px;
+    }
+    @include media-breakpoint-up(xxl){
+      font-size: 20px;
+    }
+  }
+  &__btn{
+    @extend .btn-white-empty-frame;
+    flex-shrink: 0;
 
-@include media-breakpoint-up(md) {}
+    margin-left: 30px;
+    @include media-breakpoint-down(sm){
+      padding: 9.5px 8px;
+      margin-left: 20px;
+    }
 
-@include media-breakpoint-up(sm) {}
+    span{
+      display: none;
+      @include media-breakpoint-up(lg){
+        display: inline;
+      }
+    }
+    .icon{
+      @include mt();
+      color: $white;
+      @include media-breakpoint-up(lg){
+        display: none;
+      }
+    }
 
-@include media-breakpoint-up(xs) {}
+    &:hover{
+      color: $body-color;
+      .icon{
+        color: $body-color;
+      }
+    }
+  }
 
+  //content
+  &__content{
+    padding: 40px 0 10px 0;
+    @include media-breakpoint-up(sm){
+      padding: 40px 0 10px 0;
+    }
+    @include media-breakpoint-up(xl){
+      padding: 60px 0 20px 0;
+    }
+    @include media-breakpoint-up(xxl){
+      padding: 68px 0 29px 0;
+    }
+  }
+  &__c-row{
+    @include roww(20px);
+    @include media-breakpoint-up(xl){
+      @include roww(30px);
+    }
+    @include media-breakpoint-up(xxl){
+      @include roww(40px);
+    }
+  }
+  &__col{
+    padding-bottom: 20px;
+  }
+  //1,2
+  &__title{
+    font-weight: bold;
+    font-family: $mono;
+    color: $danger;
 
-// 
-@include media-breakpoint-between(md, xl) {}
+    font-size: 16px;
+    line-height: (20/16);
+    margin-bottom: 15px;
+    @include media-breakpoint-up(xl){
+      margin-bottom: 20px;
+    }
+    @include media-breakpoint-up(xxl){
+      font-size: 20px;
+      line-height: (25/20);
+    }
+  }
+  &__footer-menu{
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    li{
 
+    }
+    a{
+      @include media-breakpoint-up(sm){
+        font-size: 16px;
+      }
+      line-height: 1.5;
+      color: rgba($body-color, .5);
+      &:hover{
+        color: $danger;
+      }
+    }
+  }
+  //3
+  &__col--soc{
+    color: transparent;
+    .soc{
+      &__item{
+        margin-right: 26px;
+        width: 30px;
+        height: 30px;
 
-// 
-@include media-breakpoint-only(xs) {}
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        img{
+          width: auto;
+          height: auto;
+          max-width: 100%;
+          max-height: 100%;
+        }
+      }
 
-@include media-breakpoint-only(sm) {}
+    }
+  }
+  //4
+  &__pay-img{
+    img{
 
-@include media-breakpoint-only(md) {}
+    }
+  }
 
-@include media-breakpoint-only(lg) {}
+  //bot-strip
+  &__bot-strip{
+    border-top: 2px solid $white;
 
-@include media-breakpoint-only(xl) {}
+    padding: 15px 0 20px 0;
+    @include media-breakpoint-up(xl){
+      padding: 38px 0 33px 0;
+    }
+  }
+  &__b-row{
+    display: flex;
+    flex-wrap: wrap;
 
+    gap: 15px;
+    @include media-breakpoint-up(lg){
+      gap: 23px;
+    }
+    span,a{
+      white-space: nowrap;
 
-// 
-@include media-breakpoint-down(xl) {}
+      font-size: 14px;
+      @include media-breakpoint-up(xl){
+        font-size: 16px;
+      }
 
-@include media-breakpoint-down(lg) {}
+      line-height: 1.5;
+      color: $body-color;
+    }
+    a:hover{
+      color: $danger;
+    }
+  }
+  &__{}
+  &__{}
+  &__{}
+  &__{}
 
-@include media-breakpoint-down(md) {}
-
-@include media-breakpoint-down(sm) {}
-
-@include media-breakpoint-down(xs) {}
 }

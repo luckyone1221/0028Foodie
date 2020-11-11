@@ -1,0 +1,139 @@
+// start .sLike
+.sLike {
+	--sPT: 20px;
+	--sPB: 30px;
+	--sTPB: 30px;
+	@include media-breakpoint-up(xl){
+		--sPT: 17px;
+		--sPB: 70px;
+		--sTPB: 70px;
+	}
+
+	.section-title{
+		h2{
+			@include media-breakpoint-up(xxl){
+				font-size: 36px;
+				line-height: (44/36);
+			}
+		}
+	}
+	&__slider{
+		padding: 0 10px;
+		@include media-breakpoint-up(xl){
+			padding: 0 20px;
+		}
+		.swiper-container{
+			overflow: visible !important;
+		}
+		.swiper-wrapper{}
+		.swiper-slide{
+			width: 140px;
+			@include media-breakpoint-up(sm){
+				width: calc((100% / 3) - (25px * 2 / 3));
+			}
+			@include media-breakpoint-up(md){
+				width: calc((100% / 5) - (25px * 4 / 5));
+			}
+			@include media-breakpoint-up(lg){
+				width: calc((100% / 6) - (25px * 5 / 6));
+			}
+			@include media-breakpoint-up(xl){
+				width: calc((100% / 6) - (40px * 5 / 6));
+			}
+			@include media-breakpoint-up(xxl){
+				width: calc((100% / 8) - (40px * 7 / 8));
+			}
+		}
+	}
+	&__img{
+		position: relative;
+		display: block;
+		width: 100%;
+		padding-top: (150/200) * 100%;
+		height: 0;
+
+		margin-bottom: 20px;
+	}
+	&__img-inner{
+		background-color: $white;
+		border-radius: 20px;
+
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 100%;
+
+		display: flex;
+		align-items: center;
+		justify-content: center;
+
+		img{
+			width: auto;
+			height: auto;
+			max-height: 90%;
+			max-width: 90%;
+		}
+	}
+	&__name{
+		display: block;
+		font-family: $mono;
+		font-weight: bold;
+
+		font-size: 16px;
+		line-height: (20/16);
+		margin-bottom: 30px;
+		@include media-breakpoint-up(xxl){
+			font-size: 20px;
+			line-height: (25/20);
+			margin-bottom: 40px;
+		}
+
+		color: $body-color2;
+	}
+	//foot
+	&__foot{
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+	}
+	&__price{
+		font-family: $mono;
+		font-weight: bold;
+		font-size: 24px;
+		line-height: (28/24);
+		text-align: right;
+
+		color: $danger;
+	}
+	&__plus-btn{
+		@extend .btn;
+		@extend .btn-danger;
+		padding: 0;
+
+		width: 30px;
+		height: 30px;
+		line-height: 30px;
+		@include media-breakpoint-up(xl){
+			width: 40px;
+			height: 40px;
+			line-height: 40px;
+		}
+		border-radius: 9px;
+		text-align: center;
+
+		font-family: $mono;
+		font-weight: bold;
+
+		font-size: 20px;
+		@include media-breakpoint-up(xxl){
+			font-size: 20px;
+		}
+	}
+	&__{}
+	&__{}
+	&__{}
+	&__{}
+	&__{}
+	&__{}
+} // end.sLike

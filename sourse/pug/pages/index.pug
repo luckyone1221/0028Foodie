@@ -3,6 +3,9 @@ extends layout/main.pug
 
 include ../blocks/sContent/_sContent.pug
 include ../blocks/sContact/_sContact.pug
+include ../blocks/sKitchen/_sKitchen.pug
+include ../blocks/sLike/_sLike.pug
+include ../blocks/sBaners/_sBaners.pug
 
 block variables
 	- let  mainPage= null
@@ -10,15 +13,12 @@ block title
 	- let  title= 'title'
 	title= title
 block pagecontent
-
 	+mob-mnu()
 	+header()
-	+top-nav()
-	+topLine() 
+		+top-nav()
 	+headerBlock()
-	+sForm()
-	+sContact()
+	+sKitchen('Итальянская кухня')
+	+sKitchenJap('Японская кухня')
+	+sLike()
+	+sBaners()
 	+footer()
-
-
-	

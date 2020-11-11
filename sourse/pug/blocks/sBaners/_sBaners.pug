@@ -1,0 +1,23 @@
+mixin sBaners(data)
+	// start sBaners
+	+b.sBaners.section#sBaners&attributes(attributes)
+		.container
+			+e.row.row
+				+banerItem('Доставка', 1)
+					| Узнайте всю информацию о нашей доставке, области в которые мы доставляем и их ценах
+				+banerItem('Акции', 2)
+					| Узнайте всю информацию об акциях и выгодных предложениях нашего ресторана
+
+	// end sBaners
+
+
+mixin banerItem(headline, imgNum)
+	+e.col.col-12.col-lg-6
+		+e.item(href="#")
+			+e.ball
+			+e.img-cont&attributes(attributes)
+				img(loading='lazy' src=`img/@2x/baner-${imgNum}.png` alt="")
+			+e.headline=headline
+			+e.descr
+				block
+			+e.btn Подробнее
