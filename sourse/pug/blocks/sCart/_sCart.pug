@@ -1,0 +1,161 @@
+mixin sCart(data)
+	// start sCart
+	+b.SECTION.sCart.section#sCart&attributes(attributes)
+		.container
+			+e.row.row
+				+e.left-col.col-lg-8
+					+b.section-title
+						h2 Корзина
+					//-1
+					+e.item
+						+e.img.d-none.d-md-block(href='#')
+							+e.img-inner
+								img(loading="lazy" src="img/@2x/italy-8.png" alt="")
+						+e.name-bl
+							+e.name(href="#") Крестьянская
+							+e.descr 475 г / 32 см
+						+e.inputs-bl
+							+e.i-btn--minus(href="#") -
+							+input2('', 'number')(value="1")
+							+e.i-btn--plus(href="#") +
+						+e.price 529 ₽
+						+e.trash-btn(href='#')
+							img(loading="lazy" src="img/svg/trash-icon.svg" alt="")
+					//-2
+					+e.item--no-img
+						+e.name-bl
+							+e.name Приборы
+							+e.descr Укажите количество человек, на которое делаете заказ. Мы доставим приборы бесплатно
+						+e.inputs-bl
+							+e.i-btn--minus(href="#") -
+							+input2('', 'number')(value="1")
+							+e.i-btn--plus(href="#") +
+						+e.price 529 ₽
+						+e.trash-btn(href='#')
+							img(loading="lazy" src="img/svg/trash-icon.svg" alt="")
+				+e.nav-col.col-lg-4.col-xxl-3.offset-xxl-1
+					+cartStatus()
+	// end sCart
+
+mixin sCart2(data)
+	// start sCart
+	+b.SECTION.sCart.section#sCart&attributes(attributes)
+		.container
+			+e.row.row
+				+e.left-col.col-lg-8
+					+b.section-title
+						h2 Корзина
+					+cart2Content()
+				+e.nav-col.col-lg-4.col-xxl-3.offset-xxl-1
+					+cartStatus(true, true)
+	// end sCart
+
+mixin cartStatus(muted, secondActive)
+	+b.c-status
+		+e.UL.steps
+			li.active Корзина
+			if secondActive
+				li.active Оформление заказа
+			else
+				li Оформление заказа
+			li Заказ принят
+		+e.title Мой заказ
+		+e.order
+			+e.o-item
+				+e.o-name Сумма заказа
+				//-+e.o-amount 1х
+				+e.o-price 529 ₽
+			+e.o-item
+				+e.o-name Доставка
+				//-+e.o-amount 1х
+				+e.o-price 0 ₽
+		+e.result
+			span Итого:
+			span 529 ₽
+		if muted
+			+e.btn.muted(href="#") Оформить заказ
+		else
+			+e.btn(href="#") Оформить заказ
+		+e.bot-txt Примерное время доставки 45 минут
+
+mixin chbItem(txt, name)
+	+b.LABEL.checkbox
+		input(type='checkbox' name=name)
+		+e.SPAN.square
+		+e.SPAN.txt=txt
+
+mixin cart2Content()
+	+b.cart-data
+		+e.step--p-data
+			+e.title 1. Личные данные
+			+e.pesonal-data
+				+input2('Имя', 'text', undefined, 'name')
+				+input2('Номер телефона', 'tel')(value="89995552233")
+				+e.another-btn(href='#') Войти под другим номером
+		+e.step
+			+e.title 2. Доставка
+			.tabs.address-tabs
+				.tabs__caption
+					.tabs__btn.active Привезите домой
+					.tabs__btn Заберу сам
+				.tabs__wrap
+					.tabs__content.active
+						+e.title--sm Адрес доставки
+						+e.inputs
+							+input2('ул. Пушкина', 'text', undefined, 'street')(class="long-inp")
+							+input2('55', 'number', undefined, 'street_num')(class="s-short-inp")
+							+input2('кв.102', 'text', undefined, 'flat')(class="short-inp")
+							+input2('Подъезд', 'text', undefined, 'flat')(class="short-inp")
+							+input2('Этаж', 'text', undefined, 'flat')(class="short-inp")
+							+input2('Код', 'text', undefined, 'flat')(class="s-short-inp")
+							+chbItem('Есть домофон', 'intercom')
+						+e.warning
+							span Для оформления заказа необходимо подтвердить адрес
+						+e.btn(type='submit') Подтвердить адрес
+					.tabs__content
+						+e.title Адрес самовывоза
+						+e.address-bl
+							+e.a-icon
+								//-img(loading="lazy" src="img/@2x/" alt="")
+								+icon('check-icon')
+							+e.a-txt
+								+e.a-title ул. Пушкина, 6
+								+e.a-shedule Ежедневно с 9:00 до 23:50
+			.tabs.time-tabs
+				.tabs__caption
+					.tabs__btn Как можно раньше
+					.tabs__btn.active Ко времени
+				.tabs__wrap
+					.tabs__content
+						//dont remove empty '__content', requred for correct work of js
+					.tabs__content.active
+						+e.selects
+							select.form-control
+								option Сегодня
+								option Завтра
+								option 11.12
+								option 12.12
+								option 13.12
+								option 14.12
+								option 15.12
+							select.form-control
+								option 13:45
+								option 14:45
+								option 15:45
+		+e.step
+			+e.title 3. Оплата
+			.tabs
+				.tabs__caption
+					.tabs__btn.active Онлайн картой
+					.tabs__btn Наличными
+					.tabs__btn Картой при получении
+				.tabs__wrap
+					.tabs__content
+					.tabs__content
+						+e.title Комментарий к заказу
+						+e.inputs
+							+input2('Сдача с')(class='short-inp')
+							+chbItem('Без сдачи', 'noChange')
+					.tabs__content
+				+e.title Комментарий к заказу
+				+input2('Комментарий к заказу', 'textarea', undefined, 'comment')

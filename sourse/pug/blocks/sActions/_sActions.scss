@@ -1,0 +1,127 @@
+// start .sActions
+.sActions {
+  --sPT: 30px;
+  --sPB: 0px;
+  --sTPB: 30px;
+  @include media-breakpoint-up(lg){
+    --sPT: 35px;
+    --sPB: 100px;
+    --sTPB: 50px;
+  }
+  @include media-breakpoint-up(xl){
+    --sPT: 50px;
+    --sPB: 153px;
+    --sTPB: 60px;
+  }
+
+
+  .section-title{
+    h2{
+
+    }
+  }
+
+
+  &__row{
+    @include roww(20px);
+    @include media-breakpoint-up(xl){
+      @include roww(30px);
+    }
+    @include media-breakpoint-up(xxl){
+      @include roww(40px);
+    }
+  }
+  &__col{
+    padding-bottom: 23px;
+    @include media-breakpoint-up(md){
+      padding-bottom: 20px;
+    }
+    @include media-breakpoint-up(xl){
+      padding-bottom: 30px;
+    }
+    @include media-breakpoint-up(xxl){
+      padding-bottom: 35px;
+    }
+  }
+  &__item{
+
+  }
+  &__img{
+    @extend .accept-ratio-frame;
+    padding-top: (340/680) * 100%;
+
+    margin-bottom: 10px;
+    @include media-breakpoint-up(md){
+      margin-bottom: 15px;
+    }
+    @include media-breakpoint-up(xl){
+      margin-bottom: 20px;
+    }
+    @include media-breakpoint-up(xxl){
+      margin-bottom: 27px;
+    }
+  }
+  &__descr{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  &__txt-bl{
+    display: block;
+  }
+  &__title{
+    font-family: $mono;
+    font-weight: bold;
+    display: block;
+    color: $body-color2;
+    &:hover{
+      color: $danger;
+    }
+
+    font-size: 16px;
+    line-height: (20/16);
+    margin-bottom: 10px;
+    @include media-breakpoint-up(xl){
+      font-size: 20px;
+      line-height: (25/20);
+      margin-bottom: 12px;
+    }
+    @include media-breakpoint-up(xxl){
+      font-size: 30px;
+      line-height: (37/30);
+      margin-bottom: 13px;
+    }
+  }
+  &__txt{
+    display: block;
+    line-height: 1.5;
+
+    font-size: 10px;
+    @include media-breakpoint-up(lg){
+      font-size: 12px;
+    }
+    @include media-breakpoint-up(xl){
+      font-size: 14px;
+    }
+    @include media-breakpoint-up(xxl){
+      font-size: 16px;
+    }
+    color: $body-color;
+  }
+  &__btn{
+    display: inline-block;
+    vertical-align: top;
+    flex-shrink: 0;
+    @extend .btn;
+    @extend .btn-danger;
+
+    margin-left: 20px;
+    @include media-breakpoint-up(xl){
+      margin-left: 30px;
+    }
+  }
+  &__{}
+  &__{}
+  &__{}
+
+} // end.sActions

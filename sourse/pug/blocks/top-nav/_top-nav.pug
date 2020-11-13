@@ -31,7 +31,9 @@ mixin top-nav()
 			+e.A.cart-btn(tabindex='0' data-toggle='popover' data-trigger='focus' data-content="Товар добавлен, перейдите в корзину для оформления доставки" data-placement="right")
 				img(loading="lazy" src="img/svg/cart.svg" alt="")
 				+e.orange-dot 3
+	// end top-nav
+
+mixin menuLine()
 	+b.menu-cont.d-none.d-lg-block
 		+e.container.container
 			+mnu()
-	// end top-nav

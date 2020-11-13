@@ -88,7 +88,7 @@ mixin kitchenItem(imgName, name, modLine, price, hasSizeChoise=true)
 				+e.desr Состав: Соус красный, картофель, бекон, филе куриное, огурцы маринованные, помидоры, моцарелла.
 				if hasSizeChoise
 					+e.size
-						+e.s-radio-cont
+						+b.s-radio-cont
 							+e.LABEL.s-radio
 								input(type="radio" name=imgName checked)
 								span 30 см

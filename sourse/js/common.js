@@ -110,30 +110,30 @@ const JSCCommon = {
 	// табы  .
 	tabscostume(tab) {
 
-		let tabs = {
-			Btn: [].slice.call(document.querySelectorAll(`.${tab}__btn`)),
-			BtnParent: [].slice.call(document.querySelectorAll(`.${tab}__caption`)),
-			Content: [].slice.call(document.querySelectorAll(`.${tab}__content`)),
-		}
-		tabs.Btn.forEach((element, index) => {
-			element.addEventListener('click', () => {
-				if (!element.classList.contains('active')) {
-					let siblings = element.parentNode.querySelector(`.${tab}__btn.active`);
-					let siblingsContent = tabs.Content[index].parentNode.querySelector(`.${tab}__content.active`);
-					siblings.classList.remove('active');
-					siblingsContent.classList.remove('active')
-					element.classList.add('active');
-					tabs.Content[index].classList.add('active');
-				} 
-			})
-		})
-		// $('.' + tab + '__caption').on('click', '.' + tab + '__btn:not(.active)', function (e) {
-		// 	$(this)
-		// 		.addClass('active').siblings().removeClass('active')
-		// 		.closest('.' + tab).find('.' + tab + '__content').hide().removeClass('active')
-		// 		.eq($(this).index()).fadeIn().addClass('active');
+		// let tabs = {
+		// 	Btn: [].slice.call(document.querySelectorAll(`.${tab}__btn`)),
+		// 	BtnParent: [].slice.call(document.querySelectorAll(`.${tab}__caption`)),
+		// 	Content: [].slice.call(document.querySelectorAll(`.${tab}__content`)),
+		// }
+		// tabs.Btn.forEach((element, index) => {
+		// 	element.addEventListener('click', () => {
+		// 		if (!element.classList.contains('active')) {
+		// 			let siblings = element.parentNode.querySelector(`.${tab}__btn.active`);
+		// 			let siblingsContent = tabs.Content[index].parentNode.querySelector(`.${tab}__content.active`);
+		// 			siblings.classList.remove('active');
+		// 			siblingsContent.classList.remove('active')
+		// 			element.classList.add('active');
+		// 			tabs.Content[index].classList.add('active');
+		// 		}
+		// 	})
+		// })
+		$('.' + tab + '__caption').on('click', '.' + tab + '__btn:not(.active)', function (e) {
+			$(this)
+				.addClass('active').siblings().removeClass('active')
+				.closest('.' + tab).find('.' + tab + '__content').hide().removeClass('active')
+				.eq($(this).index()).fadeIn().addClass('active');
 
-		// });
+		});
 
 	},
 	// /табы
@@ -244,7 +244,7 @@ function eventHandler() {
 	// добавляет подложку для pixel perfect
 	var x = window.location.host;
 	let screenName;
-	screenName = '01.png';
+	screenName = '02-1.png';
 	if (screenName && x === "localhost:3000") {
 		$(".footer").after(`<div class="pixel-perfect" style="background-image: url(screen/${screenName});"></div>`);
 	}
@@ -312,6 +312,7 @@ function eventHandler() {
 	// 		placement: 'auto'
 	// 	});
 	// });
+
 	//top-nav popover
 	var popoverTriggerList = [].slice.call(document.querySelectorAll('[data-toggle="popover"]'))
 	var popoverList = popoverTriggerList.map(function (popoverTriggerEl) {
@@ -459,7 +460,11 @@ function eventHandler() {
 		},
 
 	});
-
+	//.close-modal-js
+	// $('.close-modal-js').click(function (){
+	// 	event.preventDefault();
+	// 	console.log(this);
+	// })
 
 	//end luckyone js
 	

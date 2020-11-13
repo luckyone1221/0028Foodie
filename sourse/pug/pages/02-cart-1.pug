@@ -1,0 +1,24 @@
+extends layout/main.pug
+
+include ../blocks/sContent/_sContent.pug
+include ../blocks/sContact/_sContact.pug
+include ../blocks/sKitchen/_sKitchen.pug
+include ../blocks/sLike/_sLike.pug
+include ../blocks/sBaners/_sBaners.pug
+include ../blocks/sActions/_sActions.pug
+include ../blocks/sDelivery/_sDelivery.pug
+
+include ../blocks/sCart/_sCart.pug
+
+block variables
+	- let  mainPage= null
+block title
+	- let  title= '02-cart-1'
+	title= title
+block pagecontent
+	+mob-mnu()
+	+header()
+		+top-nav()
+	+sCart()
+	+sLike()(class='sLike--cart')
+	+footer()

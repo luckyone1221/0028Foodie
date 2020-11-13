@@ -1,0 +1,37 @@
+extends layout/main.pug
+
+include ../blocks/sContent/_sContent.pug
+include ../blocks/sContact/_sContact.pug
+include ../blocks/sKitchen/_sKitchen.pug
+include ../blocks/sLike/_sLike.pug
+include ../blocks/sBaners/_sBaners.pug
+include ../blocks/sActions/_sActions.pug
+include ../blocks/sDelivery/_sDelivery.pug
+
+include ../blocks/sCart/_sCart.pug
+
+block variables
+	- let  mainPage= null
+block title
+	- let  title= '00-modals'
+	title= title
+block pagecontent
+	+mob-mnu()
+	+header()
+		+top-nav()
+	.container.section
+		.section-title
+			h2 cart modals
+		.btns
+			.btn.btn-danger.link-modal(href="#modal-enter-tel") Вход (получить код)
+			.btn.btn-danger.link-modal(href="#modal-enter-code") Вход (ввести код)
+			.btn.btn-danger.link-modal(href="#modal-night") Доставка не работет
+			.btn.btn-danger.link-modal(href="#modal-gratitude") Благодарность
+		br
+		.section-title
+			h2 prod card modals
+		.btns
+			.btn.btn-danger.link-modal(href="#modal-prod-card") Пицца «Маргарита»
+			.btn.btn-danger.link-modal(href="#modal-half-pizza") Пицца из половинок
+			.btn.btn-danger.link-modal(href="#modal-half-pizza2") Пицца из половинок2
+	+footer()

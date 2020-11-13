@@ -356,47 +356,7 @@
 
 		margin-bottom: 16px;
 	}
-	&__s-radio-cont{
-		border: 1px solid rgba(66, 95, 96, 0.3);
-		border-radius: 20px;
-		overflow: hidden;
 
-		display: flex;
-		align-items: stretch;
-	}
-	&__s-radio{
-		cursor: pointer;
-		input{
-			display: none;
-		}
-
-		span{
-			@include mt();
-
-			padding: 4px 9px;
-			border-radius: 14.5px;
-			font-size: 12px;
-			line-height: (12/10);
-			@include media-breakpoint-up(xl){
-				padding: 5px 12px;
-				border-radius: 14.5px;
-				font-size: 14px;
-				line-height: (17/14);
-			}
-
-			color: rgba(66, 95, 96, 0.3);
-			&:hover{
-				color: rgba(66, 95, 96, .9);
-				text-shadow: 0 0 .7px rgba(66, 95, 96, .9);
-			}
-		}
-
-		input:checked + span{
-			color: $white;
-			background-color: $danger;
-		}
-
-	}
 	//foot
 	&__foot{
 		display: flex;
@@ -445,3 +405,47 @@
 	}
 
 } // end.sKitchen
+
+.s-radio-cont{
+	border: 1px solid rgba(66, 95, 96, 0.3);
+	border-radius: 20px;
+	overflow: hidden;
+
+	display: flex;
+	align-items: stretch;
+
+	&__s-radio{
+		cursor: pointer;
+		input{
+			display: none;
+		}
+
+		span{
+			@include mt();
+
+			padding: 4px 9px;
+			border-radius: 14.5px;
+			font-size: 12px;
+			line-height: (12/10);
+			@include media-breakpoint-up(xl){
+				padding: 5px 12px;
+				border-radius: 14.5px;
+				font-size: 14px;
+				line-height: (17/14);
+			}
+
+			color: rgba(66, 95, 96, 0.3);
+			&:hover{
+				color: rgba(66, 95, 96, .9);
+				text-shadow: 0 0 .7px rgba(66, 95, 96, .9);
+			}
+		}
+
+		input:checked + span{
+			color: $white;
+			background-color: $danger;
+		}
+
+	}
+}
+

@@ -1,0 +1,23 @@
+extends layout/main.pug
+
+
+include ../blocks/sContent/_sContent.pug
+include ../blocks/sContact/_sContact.pug
+include ../blocks/sKitchen/_sKitchen.pug
+include ../blocks/sLike/_sLike.pug
+include ../blocks/sBaners/_sBaners.pug
+include ../blocks/sActions/_sActions.pug
+include ../blocks/sDelivery/_sDelivery.pug
+
+block variables
+	- let  mainPage= null
+block title
+	- let  title= '05-delivery'
+	title= title
+block pagecontent
+	+mob-mnu()
+	+header()
+		+top-nav()
+		//+menuLine()
+	+sDelivery()
+	+footer()
