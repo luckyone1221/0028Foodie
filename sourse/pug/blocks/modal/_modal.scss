@@ -339,15 +339,17 @@ a {
 
 //.p-half
 .p-half{
-	display: flex;
-	align-items: stretch;
-	justify-content: space-between;
-	padding-right: 20px;
+	@include media-breakpoint-up(lg){
+		display: flex;
+		align-items: stretch;
+		justify-content: space-between;
+		padding-right: 20px;
+	}
 
 	&__controll-bl{
 		flex-shrink: 0;
 		width: 100%;
-		@include media-breakpoint-up(sm){
+		@include media-breakpoint-up(lg){
 			width: 380px;
 		}
 
@@ -356,7 +358,7 @@ a {
 			padding: 40px 20px 35px 40px;
 		}
 		background-color: $light2;
-		border-radius: 30px 0 0 30px;
+		//border-radius: 30px 0 0 30px;
 	}
 	&__title{
 		font-family: $mono;
@@ -449,8 +451,26 @@ a {
 
 	}
 	.s-radio-cont{
-		&__s-radio{
+		width: auto;
+		padding: 5px;
+		@include media-breakpoint-up(xl){
+			width: auto;
+			margin-left: 15px;
+			padding: 0;
+		}
 
+		&__s-radio{
+			@include media-breakpoint-down(xl){
+				display: block;
+				width: 50%;
+			}
+
+			span{
+				@include media-breakpoint-down(xl){
+					display: block;
+					width: 100%;
+				}
+			}
 		}
 	}
 	//chose-btns
@@ -576,10 +596,12 @@ a {
 		flex-grow: 1;
 		padding: 20px;
 
-		height: 600px;
-		max-height: 90vh;
-		margin: 25px 0 0 0;
-		overflow-y: auto;
+		@include media-breakpoint-up(lg){
+			height: 600px;
+			max-height: 90vh;
+			margin: 25px 0 0 0;
+			overflow-y: auto;
+		}
 
 		&::-webkit-scrollbar {
 			width: 6px;
@@ -647,6 +669,8 @@ a {
 		}
 	}
 	&__f-name{
+		display: block;
+		margin-bottom: 5px;
 		font-family: $mono;
 		font-weight: bold;
 	}
