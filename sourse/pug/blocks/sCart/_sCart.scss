@@ -583,7 +583,18 @@
       flex-wrap: wrap;
       align-items: center;
     }
-    gap: 20px;
+
+    & > *{
+      margin-bottom: 20px;
+      @include media-breakpoint-up(sm){
+        margin-right: 20px;
+      }
+
+      &:last-child{
+        margin-bottom: 0;
+      }
+    }
+
   }
   //input
   &__input-wrap{
@@ -838,7 +849,20 @@
     flex-wrap: wrap;
     padding-top: 3px;
 
+    justify-content: space-between;
+    @include media-breakpoint-up(sm){
+      justify-content: flex-start;
+    }
+
+    & > *{
+      margin-bottom: 20px;
+      @include media-breakpoint-up(sm){
+        margin-right: 10px;
+      }
+    }
+
     select{
+
       padding: 11px 37px 11px 20px;
       width: calc(50% - 10px);
       @include media-breakpoint-up(sm){
@@ -856,12 +880,7 @@
       &:invalid {
         color: gray;
       }
-
-      margin-bottom: 10px;
-      margin-right: 10px;
     }
-
-    gap: 10px;
   }
 
 
@@ -870,7 +889,10 @@
   &__pesonal-data--b-day{
     max-width: 100%;
     width: 100%;
-    margin-bottom: 20px;
+
+    @include media-breakpoint-up(sm){
+      //margin-bottom: 20px;
+    }
   }
   &__lonly-inp{
     padding: 0 0 20px 0;
@@ -878,6 +900,12 @@
   &__selects--b-day{
     align-items: center;
     flex-wrap: wrap;
+
+    justify-content: space-between;
+    @include media-breakpoint-up(sm){
+      justify-content: flex-start;
+    }
+
 
     margin-bottom: 20px;
 
