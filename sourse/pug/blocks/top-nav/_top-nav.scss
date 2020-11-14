@@ -389,6 +389,7 @@
 			transform-origin: top;
 			transform: scaleY(0);
 			&--lvl2{
+				transition: 0s all ease-in-out 0s;
 				left: 100%;
 				top: 0;
 			}
