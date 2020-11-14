@@ -78,15 +78,15 @@ mixin cartStatus(muted, secondActive)
 			+e.btn(href="#") Оформить заказ
 		+e.bot-txt Примерное время доставки 45 минут
 
-mixin chbItem(txt, name)
-	+b.LABEL.checkbox
-		input(type='checkbox' name=name)
+mixin chbItem(txt, name, addClasses)
+	+b.LABEL.checkbox(class=addClasses)
+		input(type='checkbox' name=name)&attributes(attributes)
 		+e.SPAN.square
 		+e.SPAN.txt=txt
 
 mixin cart2Content()
 	+b.cart-data
-		+e.step--p-data
+		+e.step
 			+e.title 1. Личные данные
 			+e.pesonal-data
 				+input2('Имя', 'text', undefined, 'name')
@@ -131,7 +131,7 @@ mixin cart2Content()
 					.tabs__content.active
 						+e.selects
 							select.form-control
-								option Сегодня
+								option(disabled selected) Сегодня
 								option Завтра
 								option 11.12
 								option 12.12
@@ -139,7 +139,7 @@ mixin cart2Content()
 								option 14.12
 								option 15.12
 							select.form-control
-								option 13:45
+								option(disabled selected) 13:45
 								option 14:45
 								option 15:45
 		+e.step

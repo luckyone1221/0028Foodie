@@ -1,18 +1,27 @@
 mixin mob-mnu()
 	+b.menu-mobile--js.d-lg-none
-		+b.toggle-menu-mobile--js
-			span
 		+e.inner
-			+mnu()
-			.text-right
+			+e.contact-items
+				.container
+					+e.contact-item--loc
+						+e.l-icon
+							img(loading="lazy" src="img/svg/location.svg" alt="")
+						+e.l-big  Симферополь
+					+e.contact-item--tell
+						+e.l-icon
+							img(loading="lazy" src="img/svg/profile.svg" alt="")
+						+e.l-big Профиль
+			.container
+				+monMnu()
 	//  мобильное меню
 
-mixin top-nav() 
+mixin top-nav(login=true)
 	// start top-nav
 	+b.top-nav.block-with-lazy
 		+e.container.container
 			+e.burger.toggle-menu-mobile--js.d-flex.d-lg-none
 				img(loading="lazy" src="img/svg/burger.svg" alt="")
+				img(loading="lazy" src="img/svg/burger-cross.svg" alt="")
 			+e.logo(href="/")
 				img(loading="lazy" src="img/svg/logo.svg" alt="")
 			+e.contact-item--loc.d-none.d-lg-flex
@@ -27,7 +36,12 @@ mixin top-nav()
 				+e.l-txt.d-none.d-lg-block
 					+e.l-big(href="tel:+79782202222") +7 (978) 220-22-22
 					+e.l-small Доставка с 9:00 до 23:50
-			+e.login-btn.d-none.d-lg-inline-block(href='#') Войти
+			if login
+				+e.login-btn.d-none.d-lg-inline-block(href='#') Войти
+			else
+				+e.profile-btn.profile-btn-js.d-none.d-lg-inline-flex(href='#')
+					img(loading="lazy" src="img/svg/profile.svg" alt="")
+					span Профиль
 			+e.A.cart-btn(tabindex='0' data-toggle='popover' data-trigger='focus' data-content="Товар добавлен, перейдите в корзину для оформления доставки" data-placement="right")
 				img(loading="lazy" src="img/svg/cart.svg" alt="")
 				+e.orange-dot 3
@@ -37,3 +51,74 @@ mixin menuLine()
 	+b.menu-cont.d-none.d-lg-block
 		+e.container.container
 			+mnu()
+
+mixin profilePopUp()
+	+b.profile-pp--js
+		+e.container--js
+			ul.acc-nav__nav
+				li: a(href="#") Мои данные
+				li: a(href="#") Мои заказы
+				li.exit: a(href="#") Выход
+
+mixin cartPopUp()
+	+b.cart-pp--js.active
+		+e.container--js
+			+e.content
+				+e.close-btn--js.d-sm-none
+					img(loading="lazy" src="img/svg/burger-cross.svg" alt="")
+				+e.title Мой заказ
+				//-1
+				+b.sCart
+					+e.item--alw-sm
+						+e.name-bl
+							+e.name(href="#") Крестьянская
+							+e.descr 475 г / 32 см
+						+e.inputs-bl
+							+e.i-btn--minus(href="#") -
+							+input2('', 'number')(value="1")
+							+e.i-btn--plus(href="#") +
+						+e.price 529 ₽
+						+e.trash-btn(href='#')
+							img(loading="lazy" src="img/svg/trash-icon.svg" alt="")
+					//-2
+					+e.item--alw-sm
+						+e.name-bl
+							+e.name(href="#") Крестьянская
+							+e.descr 475 г / 32 см
+						+e.inputs-bl
+							+e.i-btn--minus(href="#") -
+							+input2('', 'number')(value="1")
+							+e.i-btn--plus(href="#") +
+						+e.price 529 ₽
+						+e.trash-btn(href='#')
+							img(loading="lazy" src="img/svg/trash-icon.svg" alt="")
+					//-2-c
+					+e.item--alw-sm
+						+e.name-bl
+							+e.name(href="#") Крестьянская
+							+e.descr 475 г / 32 см
+						+e.inputs-bl
+							+e.i-btn--minus(href="#") -
+							+input2('', 'number')(value="1")
+							+e.i-btn--plus(href="#") +
+						+e.price 529 ₽
+						+e.trash-btn(href='#')
+							img(loading="lazy" src="img/svg/trash-icon.svg" alt="")
+					//-2-c
+					+e.item--alw-sm
+						+e.name-bl
+							+e.name(href="#") Крестьянская
+							+e.descr 475 г / 32 см
+						+e.inputs-bl
+							+e.i-btn--minus(href="#") -
+							+input2('', 'number')(value="1")
+							+e.i-btn--plus(href="#") +
+						+e.price 529 ₽
+						+e.trash-btn(href='#')
+							img(loading="lazy" src="img/svg/trash-icon.svg" alt="")
+			+e.footer
+				+e.result
+					+e.result-txt Итого:
+					+e.result-val 529 ₽
+				+e.btn(href="#") Оформить заказ
+				+e.lower-txt Примерное время доставки 45 минут

@@ -36,7 +36,7 @@ body {
 
 	position: relative; 
 	&::before {
-		content: '';
+		//content: '';
 		position: absolute;
 		left: 0;
 		top: 0;
@@ -501,5 +501,30 @@ a{
 			width: 11px;
 			height: 11px;
 		}
+	}
+}
+
+//
+.custom-scroll-frame{
+	&::-webkit-scrollbar {
+		width: 6px;
+	}
+
+	/* Track */
+	&::-webkit-scrollbar-track {
+		background: rgba($body-color, .3);
+		border-radius: 3px;
+	}
+
+	/* Handle */
+	&::-webkit-scrollbar-thumb {
+		cursor: pointer;
+		background: rgba($body-color, .5);
+		border-radius: 3px;
+	}
+
+	/* Handle on hover */
+	&::-webkit-scrollbar-thumb:hover {
+		background: rgba($body-color, 1);
 	}
 }

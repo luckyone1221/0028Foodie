@@ -1,0 +1,105 @@
+mixin sAccount(hasPar=false)
+	// start sAccount
+	+b.SECTION.sAccount.section#sAccount&attributes(attributes)
+		.container
+			+b.section-title.d-none.d-lg-block
+				h2 Мои заказы
+				if hasPar
+					p Пока вы не совершили ни одного заказа, это нужно срочно исправлять!
+			+e.row.row
+				+e.left-col.col-lg-8
+					+e.order-items
+						+orderItem()
+						+orderItem()
+						+orderItem()
+				+e.nav-col.col-lg-4.col-xxl-3.offset-xxl-1
+					+accountNav()
+	// end sAccount
+
+mixin sAccount2()
+	// start sAccount
+	+b.SECTION.sAccount.section#sAccount&attributes(attributes)
+		.container
+			+b.section-title.d-none.d-lg-block
+				h2 Мои заказы
+			+e.row.row
+				+e.left-col.col-lg-8
+					+accountSteps1()
+				+e.nav-col.col-lg-4.col-xxl-3.offset-xxl-1
+					+accountNav()
+	// end sAccount
+
+mixin accountSteps1()
+	+b.cart-data
+		+e.step
+			+e.title Личные данные
+			//--danger
+			+e.alert--green Изменения сохранены
+			+e.pesonal-data--b-day
+				+input2('Имя', 'text', undefined, 'name')
+				+input2('Номер телефона', 'tel')(value="89995552233")
+				+e.another-btn.d-none.d-xxl-block(href='#') Войти под другим номером
+			+e.lonly-inp
+				+input('E-mail', 'email')
+			+e.lonly-inp.d-block.d-xxl-none
+				+e.another-btn(href='#') Войти под другим номером
+			+e.selects--b-day
+				select.form-control
+					option(disabled selected) День
+					option 21
+					option 2
+					option 3
+				select.form-control
+					option(disabled selected) Месяц
+					option Февраля
+					option Январь
+				select.form-control.long-sm
+					option(disabled selected) Год
+					option 1992
+					option 1993
+				+e.gift-txt
+					| Значение полей можно ввести один раз.
+					|
+					br
+					| Мы дарим подарки в день рождения :)
+			//-
+			+chbItem('Информировать о скидках и акциях', 'inform_me','cart-data__inform-chb')(checked)
+			+e.save-btn(href="#") Сохранить
+		+e.step
+			+e.title Мои адреса
+			+e.aft-title Добавляйте свои адреса и заполняйте форму заказа быстрее
+			+e.title--sm Мои адреса
+			+e.inputs
+				+input2('ул. Пушкина', 'text', undefined, 'street')(class="long-inp")
+				+input2('55', 'number', undefined, 'street_num')(class="s-short-inp")
+				+input2('кв.102', 'text', undefined, 'flat')(class="short-inp")
+				+input2('Подъезд', 'text', undefined, 'flat')(class="short-inp")
+				+input2('Этаж', 'text', undefined, 'flat')(class="short-inp")
+				+input2('Код', 'text', undefined, 'flat')(class="s-short-inp")
+				+chbItem('Есть домофон', 'intercom')
+			+e.adr-btns
+				+e.deny-btn(href="#") Отмена
+				+e.add-btn(href="#") Добавить адрес
+mixin orderItem()
+	+e.o-item
+		+e.header
+			+e.number Заказ №12596
+			+e.date Дата 21.10.2020 г.
+		+e.content
+			+e.c-item Пицца “Мексиканская” (30 см) —1шт.
+			+e.c-item Пицца “Крестьянская” (40 см) — 2шт.
+		+e.address Адрес: г. Симферополь, п.Давыдовка, ул. Кубанская д.15
+		+e.sum
+			span Сумма заказа:
+			span 1549 ₽
+
+mixin accountNav()
+	+b.acc-nav
+		+e.title-bl
+			+e.title Личный кабинет
+			+e.log-out.d-lg-none
+				img(loading="lazy" src="img/svg/exit-icon.svg" alt="")
+		+e.UL.nav
+			li: a(href="#") Мои данные
+			li: a.active(href="#") Мои заказы
+			li.exit.d-none.d-lg-flex: a(href="#") Выход

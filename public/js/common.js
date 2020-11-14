@@ -1,5 +1,11 @@
 "use strict";
 
+function _createForOfIteratorHelper(o, allowArrayLike) { var it; if (typeof Symbol === "undefined" || o[Symbol.iterator] == null) { if (Array.isArray(o) || (it = _unsupportedIterableToArray(o)) || allowArrayLike && o && typeof o.length === "number") { if (it) o = it; var i = 0; var F = function F() {}; return { s: F, n: function n() { if (i >= o.length) return { done: true }; return { done: false, value: o[i++] }; }, e: function e(_e) { throw _e; }, f: F }; } throw new TypeError("Invalid attempt to iterate non-iterable instance.\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method."); } var normalCompletion = true, didErr = false, err; return { s: function s() { it = o[Symbol.iterator](); }, n: function n() { var step = it.next(); normalCompletion = step.done; return step; }, e: function e(_e2) { didErr = true; err = _e2; }, f: function f() { try { if (!normalCompletion && it.return != null) it.return(); } finally { if (didErr) throw err; } } }; }
+
+function _unsupportedIterableToArray(o, minLen) { if (!o) return; if (typeof o === "string") return _arrayLikeToArray(o, minLen); var n = Object.prototype.toString.call(o).slice(8, -1); if (n === "Object" && o.constructor) n = o.constructor.name; if (n === "Map" || n === "Set") return Array.from(o); if (n === "Arguments" || /^(?:Ui|I)nt(?:8|16|32)(?:Clamped)?Array$/.test(n)) return _arrayLikeToArray(o, minLen); }
+
+function _arrayLikeToArray(arr, len) { if (len == null || len > arr.length) len = arr.length; for (var i = 0, arr2 = new Array(len); i < len; i++) { arr2[i] = arr[i]; } return arr2; }
+
 function ownKeys(object, enumerableOnly) { var keys = Object.keys(object); if (Object.getOwnPropertySymbols) { var symbols = Object.getOwnPropertySymbols(object); if (enumerableOnly) symbols = symbols.filter(function (sym) { return Object.getOwnPropertyDescriptor(object, sym).enumerable; }); keys.push.apply(keys, symbols); } return keys; }
 
 function _objectSpread(target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i] != null ? arguments[i] : {}; if (i % 2) { ownKeys(Object(source), true).forEach(function (key) { _defineProperty(target, key, source[key]); }); } else if (Object.getOwnPropertyDescriptors) { Object.defineProperties(target, Object.getOwnPropertyDescriptors(source)); } else { ownKeys(Object(source)).forEach(function (key) { Object.defineProperty(target, key, Object.getOwnPropertyDescriptor(source, key)); }); } } return target; }
@@ -99,18 +105,16 @@ var JSCCommon = {
 		}
 	},
 	mobileMenu: function mobileMenu() {
-		var _this2 = this;
-
 		if (this.menuMobileLink) {
-			this.toggleMenu();
-			document.addEventListener('mouseup', function (event) {
-				var container = event.target.closest(".menu-mobile--js.active"); // (1)
+			this.toggleMenu(); // document.addEventListener('mouseup', (event) => {
+			// 	let container = event.target.closest(".menu-mobile--js.active"); // (1)
+			// 	if (!container) {
+			// 		this.closeMenu();
+			// 	}
+			// });
 
-				if (!container) {
-					_this2.closeMenu();
-				}
-			}, {
-				passive: true
+			$('.toggle-menu-mobile--js').click(function () {
+				this.classList.toggle('active');
 			});
 			window.addEventListener('resize', function () {
 				if (window.matchMedia("(min-width: 992px)").matches) {
@@ -254,7 +258,7 @@ function eventHandler() {
 
 	var x = window.location.host;
 	var screenName;
-	screenName = '02-1.png';
+	screenName = 'orders.png';
 
 	if (screenName && x === "localhost:3000") {
 		$(".footer").after("<div class=\"pixel-perfect\" style=\"background-image: url(screen/".concat(screenName, ");\"></div>"));
@@ -316,7 +320,7 @@ function eventHandler() {
 	var popoverTriggerList = [].slice.call(document.querySelectorAll('[data-toggle="popover"]'));
 	var popoverList = popoverTriggerList.map(function (popoverTriggerEl) {
 		return new bootstrap.Popover(popoverTriggerEl, {
-			template: '<div class="popover top-nav-popover" role="tooltip">' + '<div class="popover-arrow"></div>' + '<h3 class="popover-header"></h3>' + '<div class="popover-body"></div>' + '</div>'
+			template: '<div class="popover top-nav-popover" role="tooltip">' + '<div class="popover-arrow"></div>' + '<h3 class="popover-header"></h3>' + '<div class="popover-body"></div>' + '<div class="popover-bell"><img loading="lazy" src="img/svg/bell.svg" alt=""></div>' + '</div>'
 		});
 	}); //header block slider
 	//
@@ -436,12 +440,117 @@ function eventHandler() {
 			nextEl: '.menu-next--js',
 			prevEl: '.menu-prev--js'
 		}
-	}); //.close-modal-js
-	// $('.close-modal-js').click(function (){
-	// 	event.preventDefault();
-	// 	console.log(this);
-	// })
-	//end luckyone js
+	}); //sub mob-menu  toggle js
+
+	var lvl1ToggleLinks = document.querySelectorAll('.toggle-link-js-lvl-1'); //let Alllvl2ToggleLinks = document.querySelectorAll('.toggle-link-js-lvl-2');
+
+	$('.menu-mobile--js').click(function () {
+		var target = event.target;
+
+		if (target.classList.contains('toggle-link-js-lvl-1')) {
+			event.preventDefault();
+
+			var _iterator = _createForOfIteratorHelper(lvl1ToggleLinks),
+					_step;
+
+			try {
+				for (_iterator.s(); !(_step = _iterator.n()).done;) {
+					var link = _step.value;
+
+					if (link === target) {
+						toggleSubMenu(link);
+					} else {
+						var lvl2ToggleLinks = link.parentElement.querySelectorAll('.toggle-link-js-lvl-2');
+
+						var _iterator2 = _createForOfIteratorHelper(lvl2ToggleLinks),
+								_step2;
+
+						try {
+							for (_iterator2.s(); !(_step2 = _iterator2.n()).done;) {
+								var subLink = _step2.value;
+								closeSubMenu(subLink);
+							}
+						} catch (err) {
+							_iterator2.e(err);
+						} finally {
+							_iterator2.f();
+						}
+
+						closeSubMenu(link);
+					}
+				}
+			} catch (err) {
+				_iterator.e(err);
+			} finally {
+				_iterator.f();
+			}
+		}
+
+		if (target.classList.contains('toggle-link-js-lvl-2')) {
+			event.preventDefault();
+
+			var _lvl2ToggleLinks = target.parentElement.parentElement.querySelectorAll('.toggle-link-js-lvl-2');
+
+			var _iterator3 = _createForOfIteratorHelper(_lvl2ToggleLinks),
+					_step3;
+
+			try {
+				for (_iterator3.s(); !(_step3 = _iterator3.n()).done;) {
+					var _link = _step3.value;
+
+					if (target === _link) {
+						toggleSubMenu(_link);
+					} else {
+						closeSubMenu(_link);
+					}
+				}
+			} catch (err) {
+				_iterator3.e(err);
+			} finally {
+				_iterator3.f();
+			}
+		}
+	});
+
+	function toggleSubMenu(link) {
+		$(link).toggleClass('active');
+		var submenu = link.parentElement.querySelector('.submenu-js');
+		$(submenu).slideToggle(function () {
+			$(this).toggleClass('active');
+		});
+	}
+
+	function closeSubMenu(link) {
+		$(link).removeClass('active');
+		var submenu = link.parentElement.querySelector('.submenu-js');
+		$(submenu).slideUp(function () {
+			$(this).removeClass('active');
+		});
+	} //profile popup js
+
+
+	$('.profile-btn-js').click(function () {
+		event.preventDefault();
+		$('.profile-pp--js').addClass('active');
+	});
+	$('.profile-pp--js').click(function () {
+		if (!event.target.closest('.profile-pp__container--js')) {
+			this.classList.remove('active');
+		}
+	}); //cart popup js
+
+	$('.cart-btn-js').click(function () {
+		event.preventDefault();
+		$('.cart-pp--js').toggleClass('active');
+	});
+	$('.cart-pp--js').click(function () {
+		if (!event.target.closest('.cart-pp__container--js')) {
+			this.classList.remove('active');
+		}
+	});
+	$('.cart-pp__close-btn--js').click(function () {
+		$('.cart-pp--js').removeClass('active');
+	}); //end luckyone js
 }
 
 ;

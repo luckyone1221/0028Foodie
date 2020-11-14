@@ -8,7 +8,63 @@ mixin mnu()
 			"Доставка":"#",
 			"Экскурсия на кухню":"#",
 			}
+		var subNav = {
+			"Итальянская кухня": "#",
+			"Японская кухня": "#",
+			"Паназиатская кухня": "#",
+		}
+		var subNav2 = {
+			"Пицца 2 в 1": "#",
+			"Пицца в Симферополе": "#",
+			"Пицца на тонком тесте": "#",
+		}
 	+b.UL.navMenu(itemscope itemtype="http://schema.org/SiteNavigationElement")
 		each linkPatch, linkName in nav
-			+e.LI.item( itemprop="item" ): +e.A.link(href= linkPatch  itemprop="url")= linkName
+			+e.LI.item( itemprop="item" )
+				+e.A.link(href= linkPatch  itemprop="url")= linkName
+				//-2
+				+e.UL.submenu
+					each linkPatch2, linkName2 in subNav
+						+e.LI.sub-item--lvl1( itemprop="item")
+							+e.A.sub-link--lvl1(href= linkPatch2  itemprop="url")= linkName2
+							//-3
+							+e.UL.submenu--lvl2
+								each linkPatch3, linkName3 in subNav2
+									+e.LI.sub-item--lvl2( itemprop="item")
+										+e.A.sub-link--lvl2(href= linkPatch3  itemprop="url")= linkName3
 //- /menu
+
+mixin monMnu()
+	-
+		var nav= {
+			"Меню":"#",
+			"Акции":"#",
+			"Бонусы":"#",
+			"О нас":"#",
+			"Доставка":"#",
+			"Экскурсия на кухню":"#",
+		}
+		var subNav = {
+			"Итальянская кухня": "#",
+			"Японская кухня": "#",
+			"Паназиатская кухня": "#",
+		}
+		var subNav2 = {
+			"Пицца 2 в 1": "#",
+			"Пицца в Симферополе": "#",
+			"Пицца на тонком тесте": "#",
+		}
+	+b.UL.navMenu(itemscope itemtype="http://schema.org/SiteNavigationElement")
+		each linkPatch, linkName in nav
+			+e.LI.item( itemprop="item" )
+				+e.A.link.toggle-link-js-lvl-1(href= linkPatch  itemprop="url")= linkName
+				//-2
+				+e.UL.submenu.submenu-js
+					each linkPatch2, linkName2 in subNav
+						+e.LI.sub-item--lvl1( itemprop="item")
+							+e.A.sub-link--lvl1.toggle-link-js-lvl-2(href= linkPatch2  itemprop="url")= linkName2
+							//-3
+							+e.UL.submenu--lvl2.submenu-js
+								each linkPatch3, linkName3 in subNav2
+									+e.LI.sub-item--lvl2( itemprop="item")
+										+e.A.sub-link--lvl2(href= linkPatch3  itemprop="url")= linkName3
