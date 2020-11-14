@@ -526,30 +526,45 @@ function eventHandler() {
 		$(submenu).slideUp(function () {
 			$(this).removeClass('active');
 		});
-	} //profile popup js
+	} // custom popups
+	//profile popup js
 
+
+	function togglePopUp(qSelector) {
+		$(qSelector).toggleClass('active');
+		document.body.classList.toggle("fixed");
+		document.querySelector('html').classList.toggle("fixed");
+	}
+
+	function closePopUp(qSelector) {
+		$(qSelector).removeClass('active');
+		document.body.classList.remove("fixed");
+		document.querySelector('html').classList.remove("fixed");
+	}
 
 	$('.profile-btn-js').click(function () {
 		event.preventDefault();
-		$('.profile-pp--js').addClass('active');
+		closePopUp('.cart-pp--js');
+		togglePopUp('.profile-pp--js');
 	});
 	$('.profile-pp--js').click(function () {
 		if (!event.target.closest('.profile-pp__container--js')) {
-			this.classList.remove('active');
+			closePopUp('.profile-pp--js');
 		}
 	}); //cart popup js
 
 	$('.cart-btn-js').click(function () {
 		event.preventDefault();
-		$('.cart-pp--js').toggleClass('active');
+		closePopUp('.profile-pp--js');
+		togglePopUp('.cart-pp--js');
 	});
 	$('.cart-pp--js').click(function () {
 		if (!event.target.closest('.cart-pp__container--js')) {
-			this.classList.remove('active');
+			closePopUp('.cart-pp--js');
 		}
 	});
 	$('.cart-pp__close-btn--js').click(function () {
-		$('.cart-pp--js').removeClass('active');
+		closePopUp('.cart-pp--js');
 	}); //end luckyone js
 }
 

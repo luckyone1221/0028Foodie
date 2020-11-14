@@ -6,6 +6,7 @@ mixin sCart(data)
 				+e.left-col.col-lg-8
 					+b.section-title
 						h2 Корзина
+					+cartStatus2(true, true)
 					//-1
 					+e.item
 						+e.img.d-none.d-md-block(href='#')
@@ -16,7 +17,7 @@ mixin sCart(data)
 							+e.descr 475 г / 32 см
 						+e.inputs-bl
 							+e.i-btn--minus(href="#") -
-							+input2('', 'number')(value="1")
+							+input('', 'number')(value="1")
 							+e.i-btn--plus(href="#") +
 						+e.price 529 ₽
 						+e.trash-btn(href='#')
@@ -28,7 +29,7 @@ mixin sCart(data)
 							+e.descr Укажите количество человек, на которое делаете заказ. Мы доставим приборы бесплатно
 						+e.inputs-bl
 							+e.i-btn--minus(href="#") -
-							+input2('', 'number')(value="1")
+							+input('', 'number')(value="1")
 							+e.i-btn--plus(href="#") +
 						+e.price 529 ₽
 						+e.trash-btn(href='#')
@@ -45,14 +46,27 @@ mixin sCart2(data)
 				+e.left-col.col-lg-8
 					+b.section-title
 						h2 Корзина
+					//-
+					+cartStatus2(true, true)
 					+cart2Content()
 				+e.nav-col.col-lg-4.col-xxl-3.offset-xxl-1
 					+cartStatus(true, true)
 	// end sCart
 
+mixin cartStatus2(muted, secondActive)
+	+b.c-status
+		+e.UL.steps.d-lg-none
+			li.active Корзина
+			if secondActive
+				li.active Оформление заказа
+			else
+				li Оформление заказа
+			li Заказ принят
+
+
 mixin cartStatus(muted, secondActive)
 	+b.c-status
-		+e.UL.steps
+		+e.UL.steps.d-none.d-lg-flex
 			li.active Корзина
 			if secondActive
 				li.active Оформление заказа

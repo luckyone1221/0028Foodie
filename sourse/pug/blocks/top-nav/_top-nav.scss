@@ -462,10 +462,10 @@
 //profile-pp
 .profile-pp{
 	@include mt();
-	right: 120vw;
+	left: 120vw;
 	opacity: 0;
 	&.active{
-		right: 0;
+		left: 0;
 		opacity: 1;
 	}
 
@@ -503,10 +503,10 @@
 
 .cart-pp{
 	@include mt();
-	right: 120vw;
+	left: 120vw;
 	opacity: 0;
 	&.active{
-		right: 0;
+		left: 0;
 		opacity: 1;
 	}
 

@@ -19,6 +19,8 @@ block pagecontent
 	+mob-mnu()
 	+header()
 		+top-nav()
+		+profilePopUp()
+		+cartPopUp()
 	.container.section
 		.section-title
 			h2 cart modals
@@ -34,4 +36,10 @@ block pagecontent
 			.btn.btn-danger.link-modal(href="#modal-prod-card") Пицца «Маргарита»
 			.btn.btn-danger.link-modal(href="#modal-half-pizza") Пицца из половинок
 			.btn.btn-danger.link-modal(href="#modal-half-pizza2") Пицца из половинок2
+		br
+		.section-title
+			h2 custom popups
+		.btns
+			.btn.btn-danger.cart-btn-js(href="#") Попап Корзини
+			.btn.btn-danger.profile-btn-js(href="#") Попап ЛК
 	+footer()
