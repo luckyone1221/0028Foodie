@@ -14,14 +14,6 @@
     --sTPB: 60px;
   }
 
-
-  .section-title{
-    h2{
-
-    }
-  }
-
-
   &__row{
     @include roww(20px);
     @include media-breakpoint-up(xl){

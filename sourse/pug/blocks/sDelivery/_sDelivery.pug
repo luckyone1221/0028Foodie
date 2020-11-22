@@ -3,7 +3,7 @@ mixin sDelivery(data)
 	+b.SECTION.sDelivery.section#sDelivery&attributes(attributes)
 		.container
 			+b.section-title
-				h2 Доставка
+				h1 Доставка
 				p
 					| Все заказы у нас доставляются бесплатно. Доставка работает ежедневно с 09:00 до 23:50.
 					| Минимальная сумма заказа по Севастополю — от 500 рублей с учетом всех скидок.
@@ -36,16 +36,17 @@ mixin sDelivery(data)
 
 mixin zoneList()
 	+e.UL.zone-list&attributes(attributes)
-		+zoneListItem(1, '500 руб')
-		+zoneListItem(1, '600 руб')
-		+zoneListItem(1, '1000 руб')
-		+zoneListItem(1)
+		+zoneListItem(1, '500 руб', '#E45363')
+		+zoneListItem(1, '600 руб', '#17a2b8')
+		+zoneListItem(1, '1000 руб', '#ffc107')
+		+zoneListItem(1, undefined, '#425F60')
 			|Заказы в данные
 			br
 			| районы не доставляем
 
-mixin zoneListItem(num, price)
+mixin zoneListItem(num, price,dotBg)
 	+e.LI.z-item
+		+e.z-dot(style=`background-color: ${dotBg}`)
 		+e.z-title=`Зона доставки ${num}`
 		+e.z-content
 			if price

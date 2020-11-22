@@ -72,11 +72,15 @@ mixin kitchenItem(imgName, name, modLine, price, hasSizeChoise=true)
 	+e.col.col-sm-6.col-md-4.col-xl-3
 		+e.item
 			if modLine === 'new'
-				+e.line--new NEW
+				+e.line-cont
+					+e.line--new NEW
+					+e.line--hot HOT
 			if modLine === 'hot'
-				+e.line--hot HOT
+				+e.line-cont
+					+e.line--hot HOT
 			if modLine === 'hit'
-				+e.line--hit hit
+				+e.line-cont
+					+e.line--hit hit
 			+e.img(href="#")
 				+e.img-inner
 					img(loading="lazy" src=`img/@2x/${imgName}.png` alt="")
