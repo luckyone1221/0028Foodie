@@ -28,6 +28,11 @@
 		.swiper-wrapper{}
 		.swiper-slide{
 			width: 140px;
+			height: auto;
+
+			display: flex;
+			flex-direction: column;
+
 			@include media-breakpoint-up(sm){
 				width: calc((100% / 3) - (25px * 2 / 3));
 			}
@@ -93,14 +98,16 @@
 	}
 	//foot
 	&__foot{
+		margin-top: auto;
 		display: flex;
 		align-items: center;
 		justify-content: space-between;
 	}
 	&__price{
+		white-space: nowrap;
 		font-family: $mono;
 		font-weight: bold;
-		font-size: 24px;
+		font-size: 20px;
 		line-height: (28/24);
 		text-align: right;
 

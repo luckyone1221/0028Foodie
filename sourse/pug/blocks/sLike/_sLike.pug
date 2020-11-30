@@ -1,31 +1,31 @@
 mixin sLike(data)
-	// start sLike
-	+b.SECTION.sLike.section#sLike&attributes(attributes)
-		.container
-			+b.section-title
-				h2 Вам может понравиться
-		+e.slider
-			.swiper-container.like-slider-js
-				.swiper-wrapper
-					+likeSlide(1)
-					+likeSlide(1)
-					+likeSlide(3)
-					+likeSlide(4)
-					+likeSlide(5)
-					+likeSlide(6)
-					+likeSlide(1)
-					+likeSlide(1)
-	// end sLike
+  // start sLike
+  +b.SECTION.sLike.section#sLike&attributes(attributes)
+    .container
+      +b.section-title
+        h2 Вам может понравиться
+    +e.slider
+      .swiper-container.like-slider-js
+        .swiper-wrapper
+          +likeSlide(1)
+          +likeSlide(1)
+          +likeSlide(3)
+          +likeSlide(4)
+          +likeSlide(5)
+          +likeSlide(6)
+          +likeSlide(1)
+          +likeSlide(1)
+  // end sLike
 
 mixin likeSlide(imgNum)
-	.swiper-slide
-		+e.img(href="#")
-			+e.img-inner
-				img(loading="lazy" src=`img/@2x/like-${imgNum}.png` alt="")
-		+e.name(href="#")
-			| Блинчики с
-			br
-			| джемом
-		+e.foot
-			+e.price 139 ₽
-			+e.plus-btn(href='#') +
+  .swiper-slide
+    +e.img(href="#")
+      +e.img-inner
+        img(loading="lazy" src=`img/@2x/like-${imgNum}.png` alt="")
+    +e.name(href="#")
+      | Блинчики с
+      br
+      | джемом
+    +e.foot
+      +e.price 139 ₽
+      +e.plus-btn(href='#') +
