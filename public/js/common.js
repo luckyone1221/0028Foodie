@@ -565,7 +565,20 @@ function eventHandler() {
 	});
 	$('.cart-pp__close-btn--js').click(function () {
 		closePopUp('.cart-pp--js');
-	}); //end luckyone js
+	}); //04.12.2020
+
+	var tagsSlider = new Swiper('.tags-slider-js', {
+		slidesPerView: 'auto',
+		breakpoints: {
+			0: {
+				spaceBetween: 20
+			},
+			992: {
+				spaceBetween: 0
+			}
+		}
+	}); //end 04.12.2020
+	//end luckyone js
 }
 
 ;

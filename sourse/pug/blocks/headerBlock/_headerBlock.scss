@@ -70,6 +70,7 @@
 	}
 	//
 	&__menu-slider{
+		margin-bottom: rem(45);
 		position: relative;
 		.swiper-container{
 			margin: 0 -5px;
@@ -179,24 +180,26 @@
 		@include mt();
 		background: $white;
 		border-radius: 15px;
-		border: 1px solid rgba($body-color, .1);
+		border: 1px solid rgba($body-color, .8);
 
 		.img-svg-js{
 			max-width: 90%;
 			max-height: 90%;
-			width: 50%;
+			width: 60%;
 			height: auto;
 
 			path{
 				@include mt();
-				fill-opacity: 0.3!important;
-				fill: $body-color !important;
+				fill-opacity: 0.8!important;
+				fill: $danger !important;
 			}
 		}
 	}
 	&__m-name{
 		display: block;
 		@include mt();
+
+		text-shadow: 0 0 .5px rgba($body-color, .6);
 
 		font-size: 10px;
 		line-height: (12/10);
@@ -213,8 +216,67 @@
 		}
 		color: currentColor;
 	}
-	&__{}
-	&__{}
+
+	//.tags-slider
+	&__tags-slider{
+		.swiper-container{
+			@include media-breakpoint-down(lg){
+				overflow: visible!important;
+			}
+		}
+		.swiper-wrapper{
+			@include media-breakpoint-up(lg){
+				flex-wrap: wrap!important;
+				align-items: stretch;
+				transform: none!important;
+				gap: 12.37px;
+			}
+
+			@include media-breakpoint-up(xl){
+				gap: 15px;
+			}
+			@include media-breakpoint-up(xxl){
+				gap: 20px;
+			}
+		}
+		.swiper-slide{
+			width: auto;
+			height: auto;
+		}
+	}
+	&__tags-link{
+		height: 100%;
+		display: flex;
+		align-items: center;
+
+		@extend .btn-red-empty-frame;
+
+		.img-svg-js{
+			width: auto;
+			height: auto;
+			max-width: 20px;
+			path{
+				@include mt();
+				fill: $red!important;
+			}
+		}
+
+		&:hover,&.active{
+			.img-svg-js{
+				path{
+					fill: $white!important;
+				}
+			}
+		}
+
+		span{
+			margin-left: 5px;
+			font-size: 16px;
+			line-height: 1;
+		}
+
+		&.active{}
+	}
 	&__{}
 }
 

@@ -8,17 +8,12 @@ mixin sKitchen(title)
 				+e.slider
 					.swiper-container.filter-slider-js
 						.swiper-wrapper
-							+filterSlide('Пицца 2 в 1')
-							+filterSlide('Пицца в Симферополе')
-							+filterSlide('Пицца на тонком тесте')
-							+filterSlide('Паста')
-							+filterSlide('Лазанья')
-							+filterSlide('Комбо')
-							+filterSlide('Без грибов')
-							+filterSlide('Без свинины')
-							+filterSlide('Веган')
-							+filterSlide('Птица')
-							+filterSlide('Мясо')
+							//changes here #/1/#
+							// добавил иконку img/svg/cross-icon-red.svg
+							+filterSlide('Пицца 2 в 1')(class="dashed-item")
+							+filterSlide('Пицца в Симферополе')(class="dashed-item")
+							+filterSlide('Пицца на тонком тесте')(class="dashed-item")
+							+filterSlide('Паста')(class="dashed-item")
 				+e.clear-btn(href="#") Офичистить фильтр
 			+e.items-row.row
 				+kitchenItem('italy-1', 'Пицца «Русская»', 'new', '526 ₽')

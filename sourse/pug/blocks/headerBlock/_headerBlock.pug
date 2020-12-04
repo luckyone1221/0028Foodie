@@ -43,6 +43,21 @@ mixin headerBlock()
 							| мангале
 						+menuSlide(9)
 							|Горячие напитки
+			//changes here #/2/#
+			// добавил бллок и свгшки img/svg/tags-slide-icon-${от 1 до 9}.svg
+			+e.tags-slider
+				.swiper-container.tags-slider-js
+					.swiper-wrapper
+						+tagsSlide(1, 'Лучшее')(class="active")
+						+tagsSlide(2, 'Острое')
+						+tagsSlide(3, 'Веган')
+						+tagsSlide(4, 'Рыба')
+						+tagsSlide(5, 'Мясо')
+						+tagsSlide(6, 'Курица')
+						+tagsSlide(6, 'Курица')
+						+tagsSlide(7, 'Наборы')
+						+tagsSlide(8, 'Без грибов')
+						+tagsSlide(9, 'Без свинины')
 	// end headerBlock
 
 mixin headerSlider()
@@ -60,3 +75,9 @@ mixin menuSlide(imgNum)
 					img.img-svg-js(loading="lazy" src=`img/svg/menu-slide-${imgNum}.svg` alt="")
 			+e.m-name
 				block
+
+mixin tagsSlide(imgNum, txt)
+	.swiper-slide
+		+e.tags-link(href='#')&attributes(attributes)
+			img.img-svg-js(src=`img/svg/tags-slide-icon-${imgNum}.svg` alt="")
+			span=txt
