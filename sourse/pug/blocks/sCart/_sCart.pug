@@ -160,9 +160,16 @@ mixin cart2Content()
 			+e.title 3. Оплата
 			.tabs
 				.tabs__caption
-					.tabs__btn.active Онлайн картой
-					.tabs__btn Наличными
-					.tabs__btn Картой при получении
+					//changes here #/3/#
+					label.tabs__btn.active
+						input(type='radio' class="d-none" checked name="payment")
+						span Онлайн картой
+					label.tabs__btn
+						input(type='radio' class="d-none" checked name="payment")
+						span Наличными
+					label.tabs__btn
+						input(type='radio' class="d-none" checked name="payment")
+						span Картой при получении
 				.tabs__wrap
 					.tabs__content
 					.tabs__content
