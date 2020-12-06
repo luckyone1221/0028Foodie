@@ -247,8 +247,8 @@ function eventHandler() {
 	var _defaultSl;
 
 	JSCCommon.ifie();
-	JSCCommon.modalCall();
-	JSCCommon.tabscostume('tabs');
+	JSCCommon.modalCall(); //JSCCommon.tabscostume('tabs');
+
 	JSCCommon.mobileMenu();
 	JSCCommon.inputMask();
 	JSCCommon.sendForm();

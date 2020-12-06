@@ -281,3 +281,62 @@
 }
 
 // end.headerBlock
+
+
+.simple-mnu{
+	padding-bottom: rem(40);
+
+	//row
+	&__title{
+		font-weight: bold;
+		letter-spacing: 0.02em;
+		font-family: $mono;
+		line-height: (49/40);
+
+		font-size: 20px;
+		@include media-breakpoint-up(lg){
+			font-size: 24.7411px;
+		}
+		@include media-breakpoint-up(xl){
+			font-size: 35px;
+		}
+		@include media-breakpoint-up(xxl){
+			font-size: 40px;
+		}
+
+		color: $body-color2;
+
+		margin-bottom: rem(40);
+	}
+	&__row{
+
+	}
+	&__col{
+
+	}
+	&__item{
+		position: relative;
+		margin-bottom: rem(8);
+		&:before{
+			display: inline-block;
+			content: '';
+			width: rem(10);
+			height: rem(10);
+			border-radius: 50%;
+			background-color: $red;
+			margin-right: rem(10);
+		}
+
+		display: flex;
+		align-items: center;
+
+		font-weight: bold;
+		color: $body-color;
+		&:hover{
+			color: $red;
+		}
+	}
+	&__{}
+	&__{}
+	&__{}
+}
