@@ -75,10 +75,6 @@ body {
 	 
 	 
 // }
- 
-
- 
-
 
 
 .section {
@@ -91,7 +87,7 @@ body {
 	padding-bottom: var(--sTPB);
 
 	h1, h2{
-		font-weight: bold;
+		//font-weight: bold;
 		letter-spacing: 0.02em;
 		font-family: $mono;
 		line-height: (49/40);

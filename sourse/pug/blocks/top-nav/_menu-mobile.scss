@@ -83,7 +83,7 @@ $h: em(2);
 	width: 100vw;
 	top: 60px;
 	left: 0;
-	transform: translate(120%, 0);
+	transform: translate(-120%, 0);
 	@include mt(.6);
 	will-change: transform;
 
