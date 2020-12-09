@@ -261,7 +261,7 @@
 			}
 		}
 
-		&:hover,&.active{
+		&:hover,&.active, &:focus, &:active{
 			.img-svg-js{
 				path{
 					fill: $white!important;

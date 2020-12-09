@@ -578,7 +578,26 @@ function eventHandler() {
 			}
 		}
 	}); //end 04.12.2020
+	//09.12.2020
+
+	$('.search-btn-js').click(function () {
+		event.stopPropagation();
+		document.removeEventListener('click', SearchPpMissClick);
+		$('.SearchBlockWrap').fadeToggle(function () {
+			$(this).toggleClass('active');
+		});
+		document.addEventListener('click', SearchPpMissClick);
+	});
+
+	function SearchPpMissClick() {
+		if (event.target.closest('.SearchBlockWrap')) return;
+		$('.SearchBlockWrap').fadeOut(function () {
+			$(this).removeClass('active');
+		});
+		document.removeEventListener('click', SearchPpMissClick);
+	} //end 09.12.2020
 	//end luckyone js
+
 }
 
 ;
